@@ -8,6 +8,8 @@ body {
   height: 25%;
   margin: -35px;
   margin-top: -10px;
+  background-color: #f5f5f5;
+  position: fixed;
 }
 
 .head {
@@ -21,7 +23,34 @@ body {
 }
 
 .sumario li {
+  /*list-style-type: none;*/
+  list-style-position: inside;
+  display: block;
+  color: black;
+}
+
+.listaSumario li ul li ul li {
   list-style-type: none;
+  list-style-position: inside;
+  display: block;
+  margin-left: -40px;
+  color: black;
+}
+
+.listaSumario li ul li {
+  list-style-type: none;
+  list-style-position: inside;
+  display: inline-block;
+  margin-left: -40px;
+  line-height: 1.7em;
+}
+
+.listaSumario li ul {
+  line-height: 2.5em;
+}
+
+.sumario {
+  line-height: 2em;
 }
 
 .rodape {
@@ -39,7 +68,6 @@ h5 {
   list-style-position: inside;
   display: inline;
 }
-
 .fonte ul {
   list-style-type: none;
   list-style-position: inside;
@@ -55,18 +83,15 @@ h5 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
 .titulocategoria {
   color: #483d8b;
 }
-
 .linha {
   width: 100%;
   height: 2px;
   background-color: black;
   margin-right: 25px;
 }
-
 h1 {
   text-align: center;
   line-height: 1.5em;
@@ -92,4 +117,47 @@ h5 {
 
 h2 {
   margin-top: 40px;
+}
+
+#tituloSumario {
+  margin-top: 40px;
+  margin-left: 35px;
+}
+
+#rolagemSumario {
+  overflow-y: scroll;
+  height: 645px;
+  width: 405px;
+  scrollbar-width: thin;
+}
+
+.itemSumario:hover {
+  background-color: #a9a9a9;
+  transition: 0.1s;
+}
+
+.sumario a {
+  color: black;
+  text-decoration: none;
+}
+
+.sumario h3 {
+  padding: 0px;
+  margin: 1px;
+  font-size: 17px;
+}
+
+.sumario h4 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+}
+
+.linkFonte {
+  color: black;
+}
+
+footer {
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
