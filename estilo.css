@@ -2,12 +2,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5em;
 }
+
 .sumario {
   display: inline-block;
   width: 30%;
   height: 25%;
-  margin: -35px;
-  margin-top: -10px;
+  margin: -5vh;
+  margin-top: -6vh;
   background-color: #f5f5f5;
   position: fixed;
 }
@@ -18,7 +19,7 @@ body {
   float: right;
   position: relative;
   text-align: left;
-  margin-right: 25px;
+  margin-right: 5vh;
   /*letter-spacing: 1px;*/
 }
 
@@ -33,7 +34,7 @@ body {
   list-style-type: none;
   list-style-position: inside;
   display: block;
-  margin-left: -40px;
+  margin-left: -6vh;
   color: black;
 }
 
@@ -41,7 +42,7 @@ body {
   list-style-type: none;
   list-style-position: inside;
   display: inline-block;
-  margin-left: -40px;
+  margin-left: -6vh;
   line-height: 1.7em;
 }
 
@@ -92,18 +93,24 @@ h5 {
   background-color: black;
   margin-right: 25px;
 }
-h1 {
-  text-align: center;
-  line-height: 1.5em;
-  color: #483d8b;
-}
 
+#linhaTitulo {
+  width: 90%;
+  height: 2px;
+  background-color: black;
+}
 .linharodape {
   display: block;
   width: 25%;
   height: 1px;
   background-color: black;
   margin-left: 0px;
+}
+
+h1 {
+  text-align: center;
+  line-height: 1.5em;
+  color: #483d8b;
 }
 
 .comofazer ol {
@@ -119,21 +126,25 @@ h2 {
   margin-top: 40px;
 }
 
+/*SUMARIO*/
 #tituloSumario {
-  margin-top: 40px;
-  margin-left: 35px;
+  margin-top: 6vh;
+  margin-left: 6vh;
 }
 
 #rolagemSumario {
   overflow-y: scroll;
-  height: 645px;
-  width: 405px;
+  height: 105vh;
+  width: 65vh;
   scrollbar-width: thin;
+  position: fixed;
 }
 
 .itemSumario:hover {
   background-color: #a9a9a9;
   transition: 0.1s;
+  border: solid 4px transparent;
+  border-bottom-color: #483d8b;
 }
 
 .sumario a {
@@ -157,7 +168,27 @@ h2 {
   color: black;
 }
 
+.import {
+  background-color: rgba(72, 61, 139, 0.15);
+  border: 2px;
+  padding: 0.3vh;
+  margin-top: 2vh;
+  border: solid 8px transparent;
+  border-left-color: #483d8b;
+}
+.import p {
+  margin-left: 5px;
+}
+
 footer {
   margin-top: 10px;
   margin-bottom: 40px;
+}
+
+#voltatopo {
+  text-decoration: none;
+  background-color: #483d8b;
+  color: white;
+  padding: 1vh;
+  border-radius: 1vh;
 }

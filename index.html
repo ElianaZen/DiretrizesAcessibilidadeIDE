@@ -16,7 +16,7 @@
     <div class="head">
       <header>
         <h1 id="titulo"> Diretrizes de Acessibilidade em Ambientes de Desenvolvimento Integrado
-          para Estudantes com Deficiência Visual</h1>
+          para Estudantes Cegos</h1>
         <hr class="linha">
       </header>
 
@@ -24,10 +24,10 @@
         <h2 id="intro">1. Introdução</h2>
         <hr class="linha">
         <p>Este documento apresenta um conjunto de recomendações de acessibilidade para Ambientes de Desenvolvimento
-          Integrado (IDEs) direcionadas a estudantes com deficiência visual.
+          Integrado (IDEs) direcionadas a estudantes cegos.
           As recomendações têm o objetivo de orientar o projeto de IDEs de modo a torná-las apropriadas e adequadas às
           necessidades desses usuários.
-          É importante considerar que pessoas com deficiência visual interagem com os dispositivos digitais de maneira
+          É importante considerar que pessoas cegos interagem com os dispositivos digitais de maneira
           distinta dos demais usuários,
           visto que a tela e o mouse podem não ser úteis para eles (Geraldo, 2016).</p>
         <p>As recomendações foram elaboradas considerando as características e demandas dos estudantes com deficiência
@@ -226,8 +226,10 @@
             </li>
           </ol>
         </div>
-        <p><strong>IMPORTANTE:</strong> As orientações presentes nessa Diretriz precisam ser consistentes com as
-          recomendações feitas na Diretriz 5.2 (Visão Geral de Código).</p>
+        <div class="import">
+          <p><strong>IMPORTANTE:</strong> As orientações presentes nessa Diretriz precisam ser consistentes com as
+            recomendações feitas na <a href="#visaoCod"> Diretriz 5.2 (Visão Geral de Código)</a>.</p>
+        </div>
         <nav>
           <div class="fonte">
             <h5>Fonte</h5>
@@ -264,7 +266,8 @@
             <li><strong>Critério de sucesso 2.1.3:</strong> O usuário é informado quando não forem encontrados erros
               após a compilação de
               um código-fonte.</li>
-            <li><strong>Critério de sucesso 2.1.4:</strong> As mensagens de erro contêm informações a respeito da causa
+            <li id="critMensErro"><strong>Critério de sucesso 2.1.4:</strong> As mensagens de erro contêm informações a
+              respeito da causa
               do erro, sua
               localização no código-fonte e como corrigi-lo.</li>
           </ol>
@@ -292,9 +295,15 @@
               localização no código-fonte e como corrigi-lo.</li>
           </ol>
         </div>
-        <p><strong>IMPORTANTE:</strong> A orientação presente no Critério de sucesso 2.1.4 precisa ser consistente com o
-          Critério de sucesso 8.2.2 (As mensagens de erro são clara e facilmente compreendidas), da Diretriz 8.2
-          (Leitura contextual).</p>
+        <div class="import">
+          <p><strong>IMPORTANTE:</strong> A orientação presente no <a href="#critMensErro">Critério de sucesso 2.1.4</a>
+            precisa ser consistente com
+            o
+            <a href="#critSuc822"> Critério de sucesso 8.2.2</a> (As mensagens de erro são clara e facilmente
+            compreendidas), da <a href="#leiCont">Diretriz 8.2
+              (Leitura contextual)</a>.
+          </p>
+        </div>
         <nav>
           <div class="fonte">
             <h5>Fonte</h5>
@@ -441,7 +450,6 @@
           <div class="fonte">
             <h5>Fonte</h5>
             <ul>
-              <li>(ATAG, 2015)</li>
               <li>(ISO/IEC, 2018)</li>
               <li><a class="linkFonte" href="https://ebooks.iospress.nl/volumearticle/47379" target="_blank">(Petrausch
                   &
@@ -650,7 +658,6 @@
           <div class="fonte">
             <h5>Fonte</h5>
             <ul>
-              <li>(ATAG, 2015)</li>
               <li><a class="linkFonte" href="https://ieeexplore.ieee.org/abstract/document/6344485"
                   target="_blank">(Mealin
                   & Murphy-Hill, 2012)</a></li>
@@ -1045,8 +1052,12 @@
               total de linhas de um arquivo de código-fonte.</li>
           </ol>
         </div>
-        <p><strong>IMPORTANTE:</strong> As orientações presentes nessa Diretriz precisam ser consistentes com as
-          recomendações feitas na Diretriz 1.1 (Semântica) e na Diretriz 2.2 (Variáveis e Constantes).</p>
+        <div class="import">
+          <p><strong>IMPORTANTE:</strong> As orientações presentes nessa Diretriz precisam ser consistentes com as
+            recomendações feitas na <a href="#sem"> Diretriz 1.1 (Semântica)</a> e na <a href="#varConst"> Diretriz 2.2
+              (Variáveis e
+              Constantes)</a>.</p>
+        </div>
         <nav>
           <div class="fonte">
             <h5>Fonte</h5>
@@ -1166,7 +1177,6 @@
           <div class="fonte">
             <h5>Fonte</h5>
             <ul>
-              <li>(ATAG, 2015)</li>
               <li><a class="linkFonte" href="https://dl.acm.org/doi/abs/10.1145/3287324.3287410" target="_blank">(Baker,
                   Bennett & Ladner, 2019)</a></li>
               <li><a class="linkFonte" href="https://ieeexplore.ieee.org/abstract/document/9240634"
@@ -1322,7 +1332,8 @@
             <li><strong>Critério de sucesso 8.2.1:</strong> A leitura do código-fonte fornece informações que facilitam
               a
               compreensão das instruções.</li>
-            <li><strong>Critério de sucesso 8.2.2:</strong> As mensagens de erro são clara e facilmente compreendidas.
+            <li id="critSuc822"><strong>Critério de sucesso 8.2.2:</strong> As mensagens de erro são clara e facilmente
+              compreendidas.
             </li>
           </ol>
         </div>
@@ -1468,13 +1479,6 @@
                 <a href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/.">
                   https://www.w3c.br/traducoes/wcag/wcag21-pt-BR./ </a></cite></li>
             <br>
-            <li>
-              <cite>W3C, World Wide Web Consortium (2015). Authoring Tool Accessibility Guidelines (ATAG) 2.0.
-                Disponível
-                em:
-                <a href="https://www.w3.org/TR/ATAG20/."> https://www.w3.org/TR/ATAG20/.</a></cite>
-            </li>
-            <br>
             <li><cite>Zen, Eliana, da Costa, Viníciius K., and Tavares, Tatiana A. Understanding the Accessibility
                 Barriers Faced by Learners with Visual Impairments in Computer Programming. In: XXII Simpósio Brasileiro
                 sobre Fatores Humanos em Sistemas Computacionais, 2023.</cite></li>
@@ -1483,7 +1487,7 @@
         <br>
       </section>
 
-      <footer><a href="#titulo">Voltar para o topo.</a></footer>
+      <footer><a id="voltatopo" href="#titulo">Voltar para o topo.</a></footer>
 
     </div>
   </main>
@@ -1499,7 +1503,7 @@
         </a>
 
         <a href="#organizacao">
-          <li class="itemSumario">
+          <li>
             <h3 class="itemSumario">2. Estrutura e Organização das Diretrizes</h3>
           </li>
         </a>
