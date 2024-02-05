@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendações Preliminares</title>
+</head>
+
+<body>
+  <div class="head">
+    <h1 id="titulo"> Diretrizes de Acessibilidade em Ambientes de Desenvolvimento Integrado
+      para Estudantes com Deficiência Visual</h1>
+    <hr class="linha">
+
+    <h2 id="intro">1. Introdução</h2>
+    <hr class="linha">
+    <p>Este documento apresenta um conjunto de recomendações de acessibilidade para Ambientes de Desenvolvimento
+      Integrado (IDEs) direcionadas a estudantes com deficiência visual.
+      As recomendações têm o objetivo de orientar o projeto de IDEs de modo a torná-las apropriadas e adequadas às
+      necessidades desses usuários.
+      É importante considerar que pessoas com deficiência visual interagem com os dispositivos digitais de maneira
+      distinta dos demais usuários,
+      visto que a tela e o mouse podem não ser úteis para eles (Geraldo, 2016).</p>
+    <p>As recomendações foram elaboradas considerando as características e demandas dos estudantes com deficiência
+      visual, principalmente cegos.
+      Entretanto, desenvolver interfaces que atendam às diferentes necessidades desses usuários não é uma tarefa
+      trivial,
+      pois uma dificuldade percebida por uma pessoa com determinada deficiência não significa necessariamente ser a
+      mesma barreira enfrentada por outras pessoas com a mesma deficiência (Da Silva, Ferreira & Ramos, 2016).</p>
+    <p>A ênfase destas recomendações está em IDEs voltadas para programação baseada em texto. IDEs desenvolvidos para
+      programação em blocos ou híbridos não são abrangidas neste documento.
+      Além disso, a pesquisa concentra-se especificamente nos desafios enfrentados por usuários que utilizam leitores
+      de tela como recurso de Tecnologia Assistiva (TA) para interagir com IDEs. </p>
+    <p>Essa abordagem foi escolhida após a constatação de que leitores de tela se destacam como o principal recurso de
+      TA utilizado por estudantes com deficiência visual de cursos de Computação (Zen, da Costa & Tavares, 2023).
+      Dentre as principais limitações identificadas está o fato de que os leitores de tela percorrem interface gráfica
+      do IDE e o código-fonte de forma linear, obrigando o usuário a percorrer o código linha por linha, em sequência
+      (Albusays, Ludi & Huenerfauth, 2017), (Mountapmbeme, Okafor & Ludi, 2022).
+      Esse método de interação dificulta o uso por pessoas com deficiência visual (Albusays & Ludi, 2016), resultando
+      em vários problemas de interação, os quais serão abordados em cada uma das Diretrizes apresentadas nesse
+      documento.</p>
+
+    <div id="organizacao">
+      <h2 id="organizacao">2. Estrutura e Organização das Diretrizes</h2>
+      <hr class="linha">
+      <p>As Diretrizes foram classificadas em 8 Categorias, que representam o conjunto de barreiras ou limitações
+        encontradas por pessoas com deficiência visual, quais sejam: </p>
+      <ul>
+        <li><strong>Categoria 1. Compreensão do código</strong>: relacionada às barreiras encontradas por pessoas com
+          deficiência visual para ler e resumir um código-fonte utilizando leitores de tela.</li>
+        <li><strong>Categoria 2. Depuração de código</strong>: compreende as barreiras para identificar falhas no
+          software, compreender a
+          origem da falha e determinar a melhor maneira de removê-la ou corrigi-la.</li>
+        <li><strong>Categoria 3. Navegação no código:</strong> abrange questões relacionadas à leitura sequencial, linha
+          por linha,
+          realizada pelos leitores de tela, necessidade de procurar informações no código sem perder a posição de foco
+          do cursor, navegação no ambiente de programação e localização dos recursos disponibilizados pela ferramenta de
+          desenvolvimento. </li>
+        <li><strong>Categoria 4. Edição de código:</strong> relacionada às barreiras encontradas durante a escrita do
+          código-fonte, tais
+          como: uso de identação para indicar nível de escopo; utilização de cores diferentes para realçar a sintaxe do
+          código; escrita correta dos comandos; uso extensivo de caracteres não alfanuméricos; e, complexidade da
+          sintaxe das linguagens de programação.</li>
+        <li><strong>Categoria 5. Skimming de código:</strong> aborda questões envolvidas no processo de obter uma visão
+          geral de alto
+          nível do código e identificar recursos como dobra de código.</li>
+        <li><strong>Categoria 6. Interface Gráfica de Usuário:</strong> compreende as dificuldades encontradas na
+          realização de tarefas
+          de desenvolvimento que envolvem a construção de algum componente visual.</li>
+        <li><strong>Categoria 7. Sobrecarga auditiva:</strong> relacionada ao excesso de informações transmitidas via
+          canal de áudio em
+          uma interface.</li>
+        <li><strong>Categoria 8. Leitura de código-fonte:</strong> relacionada à pronúncia das palavras-reservadas das
+          linguagens de
+          programação e das mensagens de erro. </li>
+      </ul>
+      <p>Cada Categoria contém uma ou mais Diretrizes que oferecem recomendações para orientar o desenvolvimento de IDEs
+        acessíveis para pessoas com deficiência visual. No total, são 21 Diretrizes contendo recomendações que podem ser
+        aplicadas durante o processo de concepção, desenvolvimento e avaliação dessas aplicações. As Diretrizes adotam o
+        seguinte formato:</p>
+      <ul>
+        <li><strong>Descrição da Diretriz:</strong> apresenta um resumo da recomendação;</li>
+        <li><strong>Critérios de sucesso:</strong> declarações testáveis que visam determinar objetivamente se o
+          conteúdo satisfaz a
+          Diretriz;</li>
+        <li><strong>Por que fazer?</strong> Descreve a importância da orientação para reduzir barreiras de interação
+          para pessoa com
+          deficiência visual e quais as dificuldades de interação que ela pode auxiliar a mitigar;</li>
+        <li><strong>Como fazer?</strong> Contém sugestões de implementação da recomendação, elaboradas a partir das
+          soluções já
+          implementadas extraídas dos trabalhos obtidos na literatura; e,</li>
+        <li><strong>Fonte:</strong> referências bibliográficas utilizadas como base para a elaboração das Diretrizes e
+          para sugerir
+          como implementá-las.</li>
+      </ul>
+    </div>
+
+    <h2 id="dir">3. Diretrizes</h2>
+    <hr class="linha">
+
+    <h3 class="titulocategoria" id="catUm">CATEGORIA 1: Compreensão do Código</h3>
+
+    <h4 class="titulodiretriz" id="sem">Diretriz 1.1 Semântica</h4>
+    <p><strong>Descrição</strong></p>
+    <p>Comunicar o significado lógico (semântica) dos elementos que constituem uma base de código.
+    </p>
+
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 1.1.1:</strong> É possível navegar pelo explorador de pacotes utilizando as
+          teclas de seta.
+        </li>
+        <li><strong>Critério de sucesso 1.1.2:</strong> A ordem de navegação pelo explorador de pacotes reflete a
+          estrutura lógica do
+          programa.</li>
+        <li><strong>Critério de sucesso 1.1.3:</strong> Ao navegar pelo explorador de pacotes de um projeto, são
+          fornecidas informações sobre o significado lógico de cada nó dentro da hierarquia, bem como o relacionamento
+          desse nó com seus
+          irmãos ou pais.</li>
+        <li><strong>Critério de sucesso 1.1.4:</strong> É possível obter informações contextuais de cada função ou
+          método de um arquivo de código-fonte:
+          <ul>
+            <li>Finalidade: descreve a funcionalidade que o método implementa; </li>
+            <li>Qualificador: palavra-reservada das linguagens de programação que define a visibilidade de um
+              determinado método, podendo assumir valores como “public”, “private” ou “protected”, por exemplo;
+            </li>
+            <li>Tipo de retorno: tipo de dado retornado por um método após a sua execução; e, </li>
+            <li>Parâmetros: informações que podem ser passadas para um método quando ele é chamado.</li>
+          </ul>
+        </li>
+        <li><strong>Critério de sucesso 1.1.5:</strong> É possível mover o cursor do teclado para o nó principal do
+          explorador de pacotes, a qualquer momento e independentemente do nó que esteja selecionado pelo cursor do
+          teclado.</li>
+        <li><strong>Critério de sucesso 1.1.6:</strong> É possível pesquisar por um nó específico do explorador de
+          pacotes.</li>
+        <li><strong> Critério de sucesso 1.1.7:</strong> É possível obter informações sobre a localização de um nó
+          específico, em relação à estrutura geral do explorador de pacotes.</li>
+        <li><strong>Critério de sucesso 1.1.8:</strong> É possível obter informações sobre a distância do nó selecionado
+          em relação ao
+          nó raiz do explorador de pacotes.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer? </h4>
+    <p>A exploração da estrutura de um programa utilizando as teclas de seta para subir ou descer no explorador de
+      pacotes é desafiadora para usuários com deficiência visual. O leitor de telas verbaliza os rótulos dos componentes
+      gráficos, mas não transmite nenhuma informação sobre o significado lógico e o relacionamento de um nó com seus
+      irmãos ou pais, pois os leitores de tela não são inerentemente capazes de comunicar a funcionalidade das
+      visualizações hierárquicas para usuários com deficiência visual. Além disso, pessoas com deficiência visual também
+      podem ter dificuldade para distinguir o relacionamento entre classes e subclasses em uma base de código,
+      especialmente quando existem várias subclasses que herdam todas ou algumas das características da classe
+      principal.</p>
+    <h4>Como fazer?</h4>
+    <div class="comofazer">
+      <ol>
+        <li>Organizar a estrutura de um projeto de software e do código-fonte utilizando uma árvore de navegação
+          hierárquica. Ao posicionar o cursor do teclado em um nó da árvore, o usuário pode utilizar atalhos de teclado
+          para solicitar dicas de áudio para obter informações contextuais do nó e sobre o relacionamento hierárquico
+          desse nó com os demais.</li>
+        <li>Fornecer informações de contexto sobre o nó atual em relação aos seus pais e irmãos, incluindo uma descrição
+          breve do papel do nó na estrutura global do programa.</li>
+        <li>A navegação pelos nós da árvore deve seguir a lógica da hierarquia da árvore e não a ordem na qual os
+          elementos são listados dentro da hierarquia da árvore.</li>
+        <li>Fornecer atalhos de teclado para:
+          <ul>
+            <li>pesquisar por um nó específico na árvore hierárquica; </li>
+            <li>mover o cursor do teclado para o nó principal da árvore hierárquica; </li>
+            <li>mover o cursor para os nós ascendentes, irmãos e descendentes de um nó específico; e, </li>
+            <li>alterar o contexto relativo em relação a um novo ponto de ancoragem. </li>
+          </ul>
+        </li>
+        <li>Utilizar alertas sonoros para informar:
+          <ul>
+            <li>a localização de um nó específico; </li>
+            <li>a distância de um nó em relação à raiz da árvore; </li>
+            <li>quais são os nós primos de um nó selecionado; e, </li>
+            <li>a densidade de uma subárvore dentro da hierarquia;</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Hutchinson & Metatla, 2018)</li>
+        <li>(Mealin & Murphy-Hill, 2012)</li>
+        <li>(Schanzer, Bahram & Krishnamurthi, 2019)</li>
+        <li>(Smith et al., 2003)</li>
+      </ul>
+    </div>
+
+    <h3 class="titulocategoria" id="catDois">CATEGORIA 2: Depuração de Código </h3>
+
+    <h4 class="titulodiretriz" id="infoErros">Diretriz 2.1 Informações sobre erros</h4>
+    <p><strong>Descrição</strong></p>
+    <p>Informar o usuário sobre a existência de erros no código.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 2.1.1:</strong> Os erros de sintaxe são informados em tempo real</li>
+        <li><strong>Critério de sucesso 2.1.2:</strong> É exibida uma lista dos erros detectados após compilar o
+          código-fonte.</li>
+        <li><strong>Critério de sucesso 2.1.3:</strong> O usuário é informado quando não forem encontrados erros após a
+          compilação de um código-fonte.</li>
+        <li><strong>Critério de sucesso 2.1.4:</strong> As mensagens de erro contêm informações a respeito da causa do
+          erro, sua localização no código-fonte e como corrigi-lo.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>IDEs fornecem a maioria das informações sobre erros por meio de dicas visuais, como cores para realçar a sintaxe
+      ou ícones que exibem informações sobre como corrigir o erro ao passar o mouse sobre eles. Esses recursos não estão
+      disponíveis para desenvolvedores com deficiência visual de forma proativa. Pessoas com deficiência visual podem
+      enfrentar desafios ao identificar, por exemplo, a ausência, excesso ou posicionamento inadequado de caracteres,
+      operadores e parênteses, uma vez que não existem mecanismos de suporte em tempo real alternativos para o
+      reconhecimento de erros durante a escrita de código. Além disso, as mensagens de erro podem não ser claras o
+      suficiente para permitir que o usuário compreenda corretamente o conteúdo que está sendo transmitido, custando
+      mais tempo de depuração para o usuário.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Utilizar sinais de áudio para informar sobre a ocorrência erros de sintaxe no código-fonte em tempo real.
+        </li>
+        <li>Fornecer atalhos para listar os erros identificados no código e mover o cursor para a linha que contém o
+          erro.</li>
+        <li> Utilizar alertas sonoros para informar quando não for encontrado nenhum erro após a compilação de um
+          código-fonte.</li>
+        <li>Fornecer mensagens de erro mais claras e detalhadas, que informem ao usuário a causa do erro, sua
+          localização no código-fonte e como corrigi-lo.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays & Ludi, 2016)</li>
+        <li>(Petrausch & Loitsch, 2017)</li>
+        <li>(Potluri et al., 2018)</li>
+        <li>(Sampath, Merrick & Macvean, 2021)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="varConst">Diretriz 2.2 Variáveis e constantes </h4>
+    <p><strong>Descrição</strong></p>
+    <p>Fornecer informações sobre variáveis e constantes declaradas no código-fonte.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 2.2.1:</strong> É possível obter informações como nome, valor, tipo,
+          qualificador e escopo de variáveis e constantes.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Informações sobre nomes, valores, tipos e qualificadores de variáveis não estão facilmente disponíveis para uma
+      pessoa com deficiência visual. É necessário percorrer o código manualmente para consultar essas informações.
+      Entretanto, usuários de leitores de tela não conseguem examinar o código sem mover o cursor também. Para encontrar
+      algo como a grafia do identificador de uma variável, é necessário mover o cursor até o local onde a variável está
+      declarada para que o leitor de tela verbalize a informação. Depois que as informações forem obtidas, o usuário do
+      leitor de tela deve mover o cursor de volta para onde estava editando. </p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Fornecer uma lista resumida dos nomes, valores, tipos, qualificadores e escopo de variáveis e constantes
+          declaradas em um arquivo de código-fonte, acessível por meio de atalhos de teclado.
+        </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Mealin & Murphy-Hill, 2012)</li>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="marcPontos">Diretriz 2.3 Marcadores e Pontos de interrupção </h4>
+    <p><strong>Descrição</strong></p>
+    <p>Utilizar marcadores ou pontos de interrupção em um arquivo de código-fonte. </p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 2.3.1:</strong> É possível identificar, em tempo real, os marcadores ou pontos
+          de interrupção declarados em um arquivo de código-fonte.</li>
+        <li><strong>Critério de sucesso 2.3.2:</strong> É possível listar todos os marcadores ou pontos de interrupção
+          inseridos em um arquivo de código-fonte.</li>
+        <li><strong>Critério de sucesso 2.3.3:</strong> É possível inserir marcadores ou pontos de interrupção em um
+          arquivo de código-fonte.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Pontos de interrupção são marcadores definidos pelo programador no código-fonte para interromper a execução
+      normal do código em um determinado ponto, permitindo que se examine o estado do programa e depure eventuais
+      problemas. Informações sobre pontos de interrupção não estão facilmente disponíveis para uma pessoa com
+      deficiência visual. Há situações, por exemplo, em que o desenvolvedor com deficiência visual chega a uma linha de
+      código desconhecida devido a pontos de interrupção ou exceções, ou simplesmente porque o desenvolvedor estava
+      distraído.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Utilizar sinais de áudio para informar proativamente os programadores sobre marcadores ou pontos de
+          interrupção inseridos no código.</li>
+        <li>O usuário pode utilizar atalhos de teclado para obter uma listagem dos marcadores ou pontos de interrupção
+          existentes em um arquivo de código-fonte. Ao selecionar um marcador ou ponto de interrupção, o usuário pode
+          optar por acessar informações que descrevem esse ponto de interrupção: localização no código, escopo e
+          descrição. </li>
+        <li>Permitir que o usuário utilize atalhos para marcar locais específicos no código-fonte durante a depuração e
+          adicionar descrições personalizadas para documentar o motivo pelo qual o marcador ou ponto de interrupção foi
+          definido.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+    </div>
+
+    <h3 class="titulocategoria" id="catTres">CATEGORIA 3: Navegação no Código </h3>
+
+    <h4 class="titulodiretriz" id="rot">Diretriz 3.1 Rótulos</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Fornecer descrições textuais suficientemente claras para todo conteúdo não textual.</p>
+    <div class="listacriterios">
+      <h5>Critérios de sucesso</h5>
+      <ol>
+        <li><strong>Critério de sucesso 3.1.1:</strong> Todo conteúdo não textual exibido ao usuário possui uma
+          descrição textual alternativa clara para transmitir o seu significado e o destino ou a funcionalidade
+          associada.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>O texto alternativo é o melhor formato para descrever os elementos visuais que compõem a interface gráfica, como
+      ícones, para os usuários com deficiência visual. Pessoas com deficiência visual confiam em nomes significativos
+      porque, caso contrário, obterão apenas a informação de que os elementos gráficos estão presentes na interface, mas
+      podem não compreender qual funcionalidade é oferecida. </p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Fornecer descrições de texto alternativas para conteúdo não textual (imagens, gráficos e outros elementos
+          visuais), visíveis ou não, permitindo que os usuários com deficiência visual tenham acesso a todas as
+          informações por meio de leitores de tela.
+        </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(ISO/IEC, 2018)</li>
+        <li>(Petrausch & Loitsch, 2017)</li>
+        <li>(Potluri et al., 2018)</li>
+        <li>(WCAG, 2018)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="ampl">Diretriz 3.2 Ampliação e contraste</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Fornecer meios para alterar o tamanho e o contraste dos elementos visuais.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 3.2.1:</strong> É possível alterar as configurações de contraste entre o
+          primeiro plano e o plano de fundo para atender às preferências e necessidades individuais dos usuários com
+          deficiência visual.</li>
+        <li><strong>Critério de sucesso 3.2.2:</strong> Uma pessoa com daltonismo pode selecionar o seu nível de
+          daltonismo e o sistema faz a alteração automática do esquema de cores utilizado para apresentar o conteúdo.
+        </li>
+        <li><strong>Critério de sucesso 3.2.3:</strong> O tamanho e o estilo da fonte podem ser ajustados conforme as
+          preferências e necessidades individuais dos usuários com deficiência visual. </li>
+        <li><strong>Critério de sucesso 3.2.4:</strong> É possível ampliar o tamanho dos componentes gráficos para
+          atender às preferências e necessidades individuais dos usuários com deficiência visual. </li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Para se movimentar no código, IDEs limitam os programadores a algumas ações:</p>
+    <ul>
+      <p> Pessoas com daltonismo e baixa visão podem ter dificuldade para identificar a imagem de um ícone e
+        distingui-la da imagem do ponteiro do mouse, especialmente quando este último está posicionado sobre o ícone.
+        Além disso, esses usuários podem precisar ampliar os elementos da interface gráfica. Embora a maioria dos IDEs
+        permita configurar o tamanho da fonte utilizada no editor de código-fonte, não é possível ajustar o tamanho de
+        outros elementos da interface gráfica. Nesses casos, o usuário precisa recorrer aos recursos oferecidos pelo
+        Sistema Operacional, como as opções de configuração de exibição ou uso de aplicativo de lupa.</p>
+    </ul>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Implementar testadores ou verificadores de daltonismo que permitam que o usuário selecione o seu tipo de
+          daltonismo (protanopia, deuteranopia ou tritanopia) e ajuste automaticamente o esquema de cores utilizado para
+          apresentar os elementos da interface gráfica, proporcionando uma experiência visual mais confortável e
+          inclusiva.</li>
+        <li>Fornecer mecanismos para que o usuário possa escolher as cores do primeiro plano e do plano de fundo.</li>
+        <li>Fornecer mecanismos para que o usuário possa ampliar os elementos da interface gráfica, conforme as suas
+          preferências. </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(ISO/IEC, 2018)</li>
+        <li>(WCAG, 2018)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="mov">Diretriz 3.3 Movimentação pelo código</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Oferecer recursos alternativos para navegar pela base de código.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 3.3.1:</strong> É possível deslocar o cursor do teclado para o início, o
+          meio ou o fim de um arquivo de código-fonte.</li>
+        <li><strong>Critério de sucesso 3.3.2:</strong> É possível mover o cursor do teclado de volta para a última
+          linha do código-fonte que tenha sido editada.</li>
+        <li><strong>Critério de sucesso 3.3.3:</strong> É possível localizar e mover o cursor do teclado para
+          posições específicas (linhas de código ou trechos de código) em um arquivo de código-fonte </li>
+        <li><strong>Critério de sucesso 3.3.4:</strong> É possível marcar linhas de código ou trechos de código em
+          um arquivo de código-fonte para serem consultados posteriormente. </li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Para se movimentar no código, IDEs limitam os programadores a algumas ações:</p>
+    <ul>
+      <li>Usar as teclas de seta para percorrer cada linha do código-fonte. Pode ser difícil e demorado, por exemplo,
+        retornar rapidamente para uma linha de código específica ao revisar instruções do código-fonte, pois os usuários
+        de leitores de tela não conseguem examinar o código sem mover o cursor também. Essa limitação pode acarretar
+        inserção, exclusão ou alteração de código em locais incorretos, ou não intencionais.</li>
+      <li>Usar o explorador de pacotes para navegar até um método ou arquivo de código-fonte. Depois que o arquivo ou
+        método é selecionado, é necessário navegar pelo código de forma sequencial, linha por linha.</li>
+      <li>Usar um mecanismo de pesquisa. É menos eficiente e mais difícil para um usuário com deficiência visual
+        localizar informações específicas em uma base de código, limitando-se à funcionalidade de pesquisa e a alguns
+        outros recursos de navegação oferecidos pelo IDE. A realização de busca utilizando palavras-chave pode ser
+        demorada e frustrante, já que uma palavra-chave pode aparecer em vários locais na mesma base de código.</li>
+    </ul>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Poderia ser utilizado um recurso de árvore de navegação hierárquica que possibilite navegar entre as funções
+          e métodos declarados no arquivo de código atual.</li>
+        <li>Atalhos de teclado poderiam ser utilizados para deslocar o cursor do teclado para o início, para o meio ou
+          para o fim de um arquivo de código-fonte. Atalhos de teclado também poderiam ser utilizados para deslocar o
+          cursor do teclado para uma linha de código específica ou para a última linha de código que tenha sido editada.
+        </li>
+        <li>Utilizar marcadores ou tags em locais específicos do código-fonte para marcar uma instrução de código e
+          retornar a ela posteriormente para modificações adicionais. É recomendado utilizar o recurso de marcador para
+          saltar para uma instrução de código específica, ao invés de um número de linha específico, porque a numeração
+          das linhas de código pode ser alterada quando código adicional é inserido ou excluído. Além disso, seria
+          interessante que se pudesse classificar esses marcadores como "públicos" ou "privados". Marcadores privados só
+          seriam acessíveis às pessoas que os adicionaram, enquanto marcadores públicos poderiam ser acessados por todos
+          os envolvidos em um projeto. </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays & Ludi, 2016)</li>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Alotaibi, Al-Khalifa & Alsaeed, 2020)</li>
+        <li>(Baker, Bennett & Ladner, 2019)</li>
+        <li>(Mealin & Murphy-Hill, 2012)</li>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="contNivel">Diretriz 3.4 Contexto e nível de escopo</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Informar o usuário a respeito do contexto e do nível de escopo de uma determina linha de código ou trecho de
+      código.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 3.4.1:</strong> É possível obter informações a respeito do nível de escopo de
+          uma variável, constante ou instrução de fluxo de controle inserida no código-fonte.</li>
+        <li><strong>Critério de sucesso 3.4.2:</strong> É possível obter informações a respeito do início e do fim de
+          uma instrução de fluxo de controle ou bloco de código.</li>
+        <li><strong>Critério de sucesso 3.4.3:</strong> É possível obter informações a respeito do início e do fim de
+          uma instrução de fluxo de controle ou bloco de código.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Pode ser difícil para pessoas com deficiência visual compreender o nível de escopo enquanto navegam por
+      estruturas profundamente aninhadas, bem como detectar o início e o fim de um bloco de código. Os recursos visuais
+      utilizados pelos IDEs para auxiliar nesse processo, como o alinhamento de caracteres especiais ou recuos que
+      marcam o início e o fim de bloco de código, não são facilmente acessíveis aos leitores de telas.
+    </p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Utilizar uma estrutura semelhante aos níveis de cabeçalho de um arquivo HTML para identificar informações
+          estruturais como classes, métodos e instruções de fluxo de controle. O nível do cabeçalho identificaria o
+          nível de escopo de uma determinada linha de código e sua localização relativa no código.
+        </li>
+        <li>Utilizar diferentes alertas sonoros para representar o início ou o fim de uma instrução de fluxo de controle
+          ou bloco de código.</li>
+        <li>Disponibilizar recurso de indicador de nível de aninhamento e escopo, que leria em voz alta a localização
+          atual do cursor quando uma combinação especial de teclas de atalho fosse pressionada.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Armaly, Rodeghero & McMillan, 2018)</li>
+        <li>(Baker, Bennett & Ladner, 2019)</li>
+        <li>(Huff et al., 2020)</li>
+        <li>(Hutchinson & Metatla, 2018)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="estNav">Diretriz 3.5 Estratégias de navegação</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Fornecer diferentes formatos de organização e navegação pelo conteúdo sem perder informação.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 3.5.1:</strong> É possível escolher entre interagir com uma interface gráfica ou
+          uma interface simplificada, com um layout baseado em texto e menus organizados em níveis.
+        </li>
+        <li><strong>Critério de sucesso 3.5.2:</strong> É possível monitorar processos executando em segundo plano.
+        </li>
+        <li><strong>Critério de sucesso 3.5.3:</strong> É possível determinar a localização do usuário dentro da
+          hierarquia de menus e funcionalidades disponibilizadas pelo sistema. </li>
+        <li><strong>Critério de sucesso 3.5.4:</strong>: Todos os recursos e funcionalidades do IDE podem ser acessados
+          e utilizados por meio do teclado. </li>
+        <li><strong>Critério de sucesso 3.5.5:</strong> Todos os recursos e funcionalidades do IDE podem ser lidos pelos
+          leitores de tela.</li>
+        <li><strong>Critério de sucesso 3.4.6:</strong> O usuário é notificado quando o foco do cursor do teclado é
+          movido para o console do IDE ou para a interface gráfica gerada após a compilação do código-fonte, e
+          vice-versa. </li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>As interfaces dos IDEs concentram-se quase que exclusivamente em estímulos visuais, utilizando estruturas de
+      menus encapsuladas, caixas de diálogo, ícones e outros elementos gráficos e são difíceis de interagir por meio de
+      leitores de tela. O acesso a essas informações utilizando leitor de tela depende do foco do cursor, ou seja, o
+      usuário precisa buscar ativamente informações em vários componentes do IDE e definir explicitamente o foco no
+      painel apropriado, sem a possibilidade de analisar as ferramentas periféricas. Além disso, alguns recursos que
+      estão abertamente visíveis na interface gráfica do IDE, podem ficar ocultos dentro de vários níveis de hierarquia
+      de navegação e são difíceis de acessar quando se utiliza leitores de tela. Em algumas situações, o desenvolvedor
+      com deficiência visual pode não estar ciente da presença de um painel contendo as informações que procura.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Fornecer atalhos para que o usuário possa escolher entre interagir com uma interface gráfica ou uma
+          interface simplificada, com um layout baseado em texto e menus organizados em níveis.</li>
+        <li>Criar uma estrutura de conteúdo lógica e bem-organizada, facilitando a navegação e a compreensão do conteúdo
+          por usuários com deficiência visual.</li>
+        <li>Utilizar dicas auditivas para informar a finalização ou o resultado de algum processo que estiver
+          executando em segundo plano. </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Mealin & Murphy-Hill, 2012)</li>
+        <li>(Potluri et al., 2018)</li>
+        <li>(Stefik et al, 2009)</li>
+        <li>(WCAG, 2018)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="numLinhas">Diretriz 3.6 Numeração de linhas</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Informar o número de uma determinada linha de código ou o intervalo numérico de um trecho de código.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 3.5.1:</strong> É possível obter informação sobre o número da linha de código em
+          que o cursor do teclado está posicionado.</li>
+        <li><strong>Critério de sucesso 3.5.2:</strong> É possível obter informação sobre o número da linha inicial e a
+          linha final de um trecho de código.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Os números de linha, no editor de código-fonte dos IDEs, facilitam a navegação, a depuração, a colaboração e a
+      manutenção do código-fonte, mas não são acessíveis aos leitores de tela.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Fornecer atalhos de teclado para consultar o número de uma linha específica de código, bem como para
+          consultar o número da linha inicial e o número da linha final de um determinado trecho de código.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="atalhos">Diretriz 3.7 Atalhos</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Fornecer funções e comandos facilmente operáveis por meio de teclado e leitor de tela.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 3.7.1:</strong> São disponibilizados atalhos para todas as funcionalidades do
+          IDE.</li>
+        <li><strong>Critério de sucesso 3.7.2:</strong> É possível consultar todos os atalhos para as funcionalidades do
+          IDE.</li>
+        <li><strong>Critério de sucesso 3.7.3:</strong> É possível configurar e alterar os atalhos.</li>
+        <li><strong>Critério de sucesso 3.7.4:</strong> O usuário pode classificar seus atalhos favoritos para agilizar
+          uma consulta posterior.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Determinar os equivalentes em teclado (atalhos) para as funcionalidades do IDE pode ser complexo para pessoas com
+      deficiência visual, pois não existe uma forma acessível de consultar essas informações na própria ferramenta,
+      tornando necessário solicitar auxílio de outras pessoas ou realizar uma busca externa. Por vezes, tanto o IDE
+      quanto o leitor de telas utilizam um mesmo conjunto de teclas para funcionalidades diferentes, confundindo o
+      usuário. Há casos em que IDEs diferentes utilizam atalhos diferentes para acessar a mesma funcionalidade. Além
+      disso, a memorização dos atalhos do IDE pode ser desafiadora para usuários com deficiência visual.
+    </p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Disponibilizar um guia de referência rápida para os atalhos utilizados no IDE, permitindo que o usuário
+          consulte os atalhos associados a funcionalidades específicas. </li>
+        <li>Informar automaticamente os atalhos correspondentes a uma determinada funcionalidade quando o cursor do
+          teclado estiver posicionado sobre um ícone ou link. </li>
+        <li>Oferecer meios para que o usuário possa personalizar os atalhos, de acordo com suas preferências.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Baker, Bennett & Ladner, 2019)</li>
+        <li>(Petrausch & Loitsch, 2017)</li>
+        <li>(Potluri et al., 2018)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="ajudaDoc">Diretriz 3.8 Ajuda e Documentação</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Fornecer diferentes formas de ajuda e documentação ao usuário: dicas, tutoriais, recomendações ou exemplos.
+    </p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de Sucesso 3.8.1:</strong> Todas as principais funções são explicadas e instruídas e
+          tutoriais e instruções são fáceis de acessar.</li>
+        <li><strong>Critério de Sucesso 3.8.2:</strong> É fornecida uma descrição resumida de cada funcionalidade do
+          sistema.</li>
+        <li><strong>Critério de Sucesso 3.8.3:</strong> Toda documentação da IDE é acessível para programadores com
+          deficiência visual.</li>
+        <li><strong>Critério de Sucesso 3.8.4:</strong> A cada nova versão do IDE, o usuário é informado sobre
+          funcionalidades adicionadas e/ou removidas.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Os tutoriais precisam ser acessíveis para pessoas com deficiência visual de melhorar a compreensão do conceito de
+      visão e perspectiva dos IDEs. Da mesma forma, boas documentações das funcionalidades podem melhorar a eficiência e
+      facilitar o uso dessas ferramentas.
+      Cada nova versão de um IDE pode adicionar novos recursos e as funcionalidades já existentes podem sofrer
+      modificações. Muitas dessas mudanças são representadas visualmente e não existe uma abordagem estruturada para que
+      os usuários com deficiência visual sejam informados sobre elas. </p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>É necessário projetar tutoriais especificamente voltados para as necessidades das pessoas com deficiência
+          visual.</li>
+        <li>Ao lançar uma nova versão de um IDE, deve-se informar o usuário sobre a inclusão de novos recursos e a
+          implementação de modificações nas funcionalidades já existentes.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Pandey et al., 2022)</li>
+      </ul>
+    </div>
+
+    <h3 class="titulocategoria" id="catQuatro">CATEGORIA 4: Edição de Código</h3>
+
+    <h4 class="titulodiretriz" id="esp">Diretriz 4.1 Espaçamento</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Informar a quantidade total de espaços em branco quando se utilizar linguagens de programação que utilizam esses
+      mecanismos para indicar identação.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 4.1.1:</strong> Em linguagens que utilizam espaços em branco para indicar
+          identação, esses espaços são verbalizados como uma lista completa de espaços em branco.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Algumas linguagens de programação usam recuo de espaço em branco para delimitar blocos de código, ao invés de
+      usar palavras-chave ou chaves. Nessas linguagens, um aumento no recuo pode indicar um bloco de código novo e mais
+      profundo, e uma diminuição no recuo indica o fim de um bloco de código. O leitor de tela realiza a leitura de
+      todos os espaços em branco como uma sequência de caracteres de “espaço” individuais, em vez de um único recuo de
+      um comprimento específico.
+      Quando um usuário de leitor de tela navega por linguagens baseadas em indentação, o programador cego ouvirá seu
+      leitor de tela verbalizando espaços em branco como um único espaço (por exemplo, “espaço, espaço, espaço”) em vez
+      de uma contagem (“três espaços”).</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Efetuar a contagem da quantidade de espaços em branco empregados para delimitar o início ou o término de um
+          bloco de código e informar o total de espaços em branco ao usuário.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="auto">Diretriz 4.2 Autocompletar</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Realizar a leitura das informações exibidas pelo recurso autocompletar.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 4.2.1:</strong> O usuário é informado a respeito da existência do recurso
+          autocompletar a partir da posição de foco do teclado.</li>
+        <li><strong>Critério de sucesso 4.2.2:</strong> O conteúdo do recurso autocompletar é acessível aos leitores de
+          tela.</li>
+        <li><strong>Critério de sucesso 4.2.3:</strong> O usuário consegue solicitar explicitamente a leitura do
+          conteúdo exibido no recurso autocompletar.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Recursos como preenchimento automático (autocomplete), que auxiliam o programador a recordar a nomenclatura de
+      classes, métodos e atributos, são exibidos por meio de um menu pop-up contendo previsões de digitação que podem
+      ser realizadas. Esses recursos não são acessíveis aos leitores de tela.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Utilizar alertas sonoros para notificar o usuário com deficiência visual a presença do recurso
+          autocompletar, na posição de foco do teclado.</li>
+        <li>Realizar a leitura do seu conteúdo autocompletar, caso o usuário, explicitamente, solicite que esta ação
+          seja executada.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="coment">Diretriz 4.3 Comentários</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Fornecer informações sobre comentários no código-fonte.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 4.3.1:</strong> O usuário é informado, em tempo real, sobre a existência de
+          comentário na posição atual de foco do teclado. </li>
+        <li><strong>Critério de sucesso 4.3.2:</strong> O usuário pode optar entre realizar a leitura ou ignorar um
+          comentário no código.</li>
+        <li><strong>Critério de sucesso 4.3.2:</strong>O usuário pode classificar os comentários. </li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Comentários são utilizados para tornar um código-fonte mais legível, facilitar tarefas de manutenção e depuração,
+      documentar o funcionamento de um determinado trecho de código, auxiliar a superar barreiras de navegação,
+      localizar erros ou bugs no código, ou para destacar instruções de código que requerem revisão adicional.
+      Entretanto, enquanto desenvolvedores com visão podem ignorar grandes comentários de código (como documentação e
+      licenças), usuários de leitores de tela podem ter dificuldades para navegar até o final desses comentários.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Utilizar mecanismos para informar o usuário sobre a existência de comentários em determinados trechos de
+          código e comandos que possibilitem que o usuário, explicitamente, solicite que seja feita a leitura do
+          comentário.</li>
+        <li>Fornecer meios de classificar comentários de código de acordo com a sua função:
+          <ul>
+            <li>tornar o código legível ou descrever uma funcionalidade; </li>
+            <li>localizar erros que precisam de correção; e, </li>
+            <li>destacar declarações de código que necessitam de revisões futuras. </li>
+          </ul>
+        </li>
+        <li>Fornecer meios de classificar comentários de código: (1) para tornar o código legível ou descrever uma
+          função; (2) localizar erros que precisam de correção; e, (3) destacar declarações de código que necessitam de
+          revisões futuras. Além disso, deve-se possibilitar que o usuário classifique os comentários como: (1)
+          públicos, que podem ser visualizados por qualquer membro da equipe de desenvolvimento; ou, (2) privados, que
+          podem ser visualizados apenas ao usuário que declarou o comentário.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+    </div>
+
+    <h3 class="titulocategoria" id="catCinco">CATEGORIA 5: Skimming de Código</h3>
+
+    <h4 class="titulodiretriz" id="dobraCod">Diretriz 5.1 Dobra de Código</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Informar quando um trecho de código está dobrado (oculto) e pode ser expandido.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 5.1.1:</strong> O usuário é informado quando um trecho de código está dobrado
+          (oculto) e pode ser expandido.</li>
+        <li><strong>Critério de sucesso 5.1.2:</strong> O usuário pode expandir um trecho de código que estiver dobrado
+          (oculto).</li>
+        <li><strong>Critério de sucesso 5.1.3:</strong>O usuário pode ocultar (dobrar) um trecho de código.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>O recurso de dobra de código permite ocultar e exibir seletivamente seções de um arquivo de código-fonte,
+      permitindo que os programadores tenham uma visão melhor das instruções de código no entorno da região colapsada.
+      Esse recurso não é acessível aos leitores de tela e os usuários com deficiência visual podem não ser capazes de
+      identificar áreas ocultas no código ou não ter clareza sobre o uso desse recurso.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Utilizar alertas sonoros para notificar o usuário imediatamente sobre a presença de um código oculto
+          (dobrado) quando o cursor do teclado estiver posicionado sobre a linha correspondente a ele.</li>
+        <li>Fornecer atalhos de teclado para que o usuário possa dobrar (ocultar) ou expandir um trecho de código.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Petrausch & Loitsch, 2017)</li>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="visaoCod">Diretriz 5.2 Visão geral do código</h4>
+    <p><strong>Descrição</strong></p>
+    <p>Fornecer visão geral mais ampla da base de código.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 5.2.1:</strong> É possível obter a quantidade total de linhas de um arquivo de
+          código-fonte.</li>
+        <li><strong>Critério de sucesso 5.2.2:</strong> É possível obter uma lista de todos os arquivos de código-fonte
+          de um projeto de software.</li>
+        <li><strong>Critério de sucesso 5.2.3:</strong> É possível obter uma lista de todas as funções e métodos de um
+          arquivo de código-fonte.</li>
+        <li><strong>Critério de sucesso 5.2.4:</strong> É possível navegar entre os arquivos de código-fonte em um
+          projeto de software.</li>
+        <li><strong>Critério de sucesso 5.2.5:</strong> É possível navegar entre as funções e métodos de um arquivo de
+          código-fonte</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Programadores com deficiência visual têm dificuldade para obter uma visão geral de alto nível de seu código
+      porque os leitores de tela os restringem a ler o código linha por linha, em sequência. Ao contrário de usuários
+      com visão, que podem obter uma visão geral da estrutura do código rolando rapidamente para cima e para baixo em
+      uma página, os leitores de tela forçam os usuários com deficiência visual a ler um documento inteiro.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Organizar a estrutura de um projeto de software e do código-fonte por meio de uma árvore de navegação
+          hierárquica, listando todos os arquivos de código-fonte de um projeto, bem como todas as funções e métodos
+          existentes em um arquivo de código-fonte. Deve ser possível navegar até o componente de código desejado
+          pressionando a tecla ENTER.</li>
+        <li>No caso de código-fonte hospedado na internet, pode-se usar tags HTML para determinar informações
+          estruturais, onde o tipo de tag de título (nível de cabeçalho) anexada a um elemento depende de sua
+          localização relativa no código-fonte.</li>
+        <li>PPor meio de atalhos do teclado, o usuário pode solicitar que o leitor de telas informe a quantidade total
+          de linhas de um arquivo de código-fonte.
+        </li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Mealin & Murphy-Hill, 2012)</li>
+        <li>(Potluri et al., 2018)</li>
+      </ul>
+
+    </div>
+
+    <h3 class="titulocategoria" id="catSeis">CATEGORIA 6: Compreensão da Saída </h3>
+
+    <h4 class="titulodiretriz" id="valInt">Diretriz 6.1 Validação da interface gráfica</h4>
+    <p><strong>Descrição </strong></p>
+    <p>Realizar validação automatizada da interface gráfica gerada a partir de um código-fonte.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 6.1.1:</strong> É possível verificar se a interface gráfica gerada atende aos
+          critérios de acessibilidade especificados pela WCAG.</li>
+        <li><strong>Critério de sucesso 6.2.2:</strong> São fornecidas informações espaciais como localização, altura e
+          largura dos elementos da interface gráfica.</li>
+        <li><strong>Critério de sucesso 6.2.3:</strong> É possível verificar a consistência relacionada ao espaçamento
+          entre os elementos, bem como à utilização de fontes e cores.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Pessoas com deficiência visual têm dificuldades para compreender e verificar se a saída gráfica gerada um
+      código-fonte antede às necessidades e especificações desejadas. Essa dificuldade pode forçar os desenvolvedores
+      com deficiência visual a solicitar auxílio de colegas ou procurar soluções alternativas para este fim. Além disso,
+      a realização de tarefas que envolvem o desenvolvimento de interfaces de usuário faz com que muitos desenvolvedores
+      com deficiência visual sintam que não são capazes de realizá-las com a mesma eficiência ou confiança que os
+      desenvolvedores com visão. Por consequência, essas atividades são evitadas por pessoas com deficiência visual, que
+      optam por se concentrarem no aspecto lógico do programa.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Oferecer validadores de acessibilidade automatizados para verificar se a interface gráfica segue as
+          recomendações estabelecidas na WCAG.</li>
+        <li>Fornecer informações espaciais como localização, altura e largura dos elementos da interface gráfica
+          utilizando unidades de medida selecionadas pelo usuário (pixels, centímetros ou milímetros, por exemplo).</li>
+        <li>Verificar a consistência entre o espaçamento horizontal e vertical entre elementos no mesmo nível.</li>
+        <li>Verificar se há variações significativas nas fontes utilizadas e se são aplicadas no máximo três tipos de
+          fontes diferentes em uma página.</li>
+        <li>Verificar se elementos gráficos de mesmo tipo compartilham a mesma cor.</li>
+        <li>Emitir uma lista de violações de projeto encontradas que seja acessível aos leitores de tela.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Baker, Bennett & Ladner, 2019)</li>
+        <li>(Huff et al., 2020)</li>
+        <li>(Mealin & Murphy-Hill, 2012)</li>
+        <li>(Pandey et al., 2022)</li>
+        <li>(Petrausch & Loitsch, 2017)</li>
+        <li>(Potluri et al., 2019)</li>
+        <hr class="linharodape">
+        <p class="rodape"> Web Content Accessibility Guidelines</p>
+        <li>(Siegfried, 2006)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h3 class="titulocategoria" id="catSete"> CATEGORIA 7: Sobrecarga Auditiva </h3>
+
+    <h4 class="titulodiretriz" id="alertSon">Diretriz 7.1 Alertas sonoros </h4>
+    <p><strong>Descrição </strong></p>
+    <p>Possibilitar personalizar as configurações dos alertas sonoros utilizados.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 7.1.1:</strong> É possível configurar o volume dos alertas sonoros.</li>
+        <li><strong>Critério de sucesso 7.1.2:</strong> É possível ativar ou desativar os alertas sonoros.</li>
+        <li><strong>Critério de sucesso 7.1.3:</strong> É possível alterar o tipo de alerta sonoro associado a uma
+          determinada funcionalidade.</li>
+        <li><strong>Critério de sucesso 7.1.4:</strong> É dada preferência para alertas sonoros não verbais (earcons) ao
+          invés de alertas sonoros de fala (spearcons ).</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>Desenvolvedores com deficiência visual podem experimentar estresse decorrente de sobrecarga auditiva ao receber
+      muitas informações transmitidas pelo canal de áudio de uma interface. Isso acontece porque além da leitura dos
+      elementos da interface e código-fonte, os IDEs utilizam outros alertas sonoros (earcons e spearcons) para repassar
+      informações aos usuários.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>A utilização de tons curtos, claros e distinguíveis é preferível para oferecer feedback adicional, como
+          erros e avisos. Especialmente quando é necessário que esses alertas sejam emitidos ao mesmo tempo que é
+          realizada a leitura de código-fonte, comentários ou entradas.</li>
+        <li>Deve-se implementar mecanismos que permitam ao usuário escolher entre alertas sonoros baseados em fala
+          (spearcons) e não fala (earcons), bem como o tipo de som que será emitido, no caso de earcons.</li>
+        <li>Deve-se implementar mecanismos que permitam ao usuário controlar o volume do áudio, independentemente do
+          nível global de volume do sistema operacional.</li>
+        <li>Deve-se implementar mecanismos que permitam ao usuário habilitar/desabilitar os alertas sonoros associados a
+          alguma funcionalidade.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Albusays, Ludi & Huenerfauth, 2017)</li>
+        <li>(Petrausch & Loitsch, 2017)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 class="titulocategoria" id="catOito"> CATEGORIA 8: Leitura de Código-fonte </h3>
+
+    <h4 class="titulodiretriz" id="idi"> Diretriz 8.1 Idioma </h4>
+    <p><strong>Descrição</strong></p>
+    <p>Alternar automaticamente entre as línguas faladas pelo leitor de telas.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 8.1.1:</strong> A pronúncia do código-fonte é realizada em língua inglesa. </li>
+        <li><strong>Critério de sucesso 8.1.2:</strong> A pronúncia dos rótulos e demais componentes da interface é
+          realizada na língua da interface em uso.</li>
+        <li><strong>Critério de sucesso 8.1.3:</strong> As mensagens de erro podem ser traduzidas para a língua da
+          interface em uso.</li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p>A pronúncia de palavras-reservadas das linguagens de programação e das mensagens de erro emitidas (me geral, em
+      língua inglesa), realizada pelos leitores de tela, nem sempre é correta, o que pode atrapalhar o entendimento do
+      conteúdo transmitido. Isso ocorre porque, normalmente, o leitor de telas está configurado para leitura na língua
+      da interface em uso (no caso de estudantes brasileiros, em geral, língua portuguesa) e não consegue realizar uma
+      leitura do código-fonte que faça sentido para o ouvinte.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li> Identificar, automaticamente, a posição de foco do cursor (código-fonte, mensagens de erro ou componentes
+          da interface) e alternar entre as línguas pronunciadas pelo leitor de telas. Palavras reservadas da linguagem
+          de programação e mensagens de erro devem ser lidas em língua inglesa. Componentes da IDE, nomes de variáveis e
+          métodos devem ser lidos na língua da interface em uso.</li>
+        <li>O usuário pode utilizar atalhos que permitam traduzir as mensagens de erro para a língua da interface em
+          uso.</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Sampath, Merrick & Macvean, 2021)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h4 class="titulodiretriz" id="leiCont"> Diretriz 8.2 Leitura contextual </h4>
+    <p><strong>Descrição </strong></p>
+    <p>Ler o código-fonte de maneira que faça sentido para o ouvinte.</p>
+    <div class="listacriterios">
+      <h4>Critérios de sucesso</h4>
+      <ol>
+        <li><strong>Critério de sucesso 8.2.1:</strong> A leitura do código-fonte fornece informações que facilitam a
+          compreensão das instruções.</li>
+        <li><strong>Critério de sucesso 8.2.2:</strong> As mensagens de erro são clara e facilmente compreendidas.
+        </li>
+      </ol>
+    </div>
+    <h4>Por que fazer?</h4>
+    <p> Programadores cegos usam um leitor de tela para falar o código-fonte, uma palavra por vez, como se o código
+      fosse um texto. Como a sintaxe correta é imperativa na ciência da computação, até mesmo erros intermitentes podem
+      confundir os estudantes.
+      As mensagens de erro podem conter muitos jargões (por exemplo, expressões regulares, siglas específicas do
+      domínio, etc.) que podem ser difíceis de serem verbalizadas por um leitor de tela. Isso pode dificultar a
+      compreensão da mensagem de erro.</p>
+    <div class="comofazer">
+      <h4>Como fazer?</h4>
+      <ol>
+        <li>Ao efetuar a leitura do código-fonte, o leitor de telas pode utilizar alertas sonoros para:
+          <ul>
+            <li>sinalizar o início ou o término de um bloco de código, geralmente representado por chaves; </li>
+            <li>notificar a declaração ou invocação de um método, normalmente envolvendo parênteses; ou, </li>
+            <li>indicar a declaração e/ou acesso aos valores armazenados em um vetor, comumente realizado através
+              do
+              uso de colchetes. </li>
+          </ul>
+          Esses caracteres não alfanuméricos podem ser omitidos quando o usuário optar por ler o código-fonte e
+          serão
+          pronunciados ou destacados quando ocorrer um erro de sintaxe em tempo real ou quando o usuário solicitar
+          uma
+          lista dos erros de sintaxe identificados no código-fonte.
+        </li>
+        <li>Fornecer mensagens de erro mais compreensíveis para facilitar o entendimento dos estudantes com deficiência
+          visual</li>
+      </ol>
+    </div>
+    <div class="fonte">
+      <h5>Fonte</h5>
+      <ul>
+        <li>(Armaly, Rodeghero & McMillan, 2018)</li>
+        <li>(Baker, Bennett & Ladner, 2019)</li>
+        <li>(Sampath, Merrick & Macvean, 2021)</li>
+        <li>(Schanzer, Bahram & Krishnamurthi, 2019)</li>
+        <li>(Zen, da Costa & Tavares, 2023)</li>
+      </ul>
+    </div>
+
+    <h2 id="ref">4. Referências Bibliográficas</h2>
+    <hr class="linha">
+    <div class="fonte">
+      <ul>
+        <li><cite>ALBUSAYS, Khaled; LUDI, Stephanie. Eliciting programming challenges faced by developers with
+            visual impairments: exploratory study. In: Proceedings of the 9th International Workshop on Cooperative
+            and Human Aspects of Software Engineering. 2016. p. 82-85.</cite></li>
+        <br>
+        <li><cite>ALBUSAYS, Khaled; LUDI, Stephanie; HUENERFAUTH, Matt. Interviews and observation of blind software
+            developers at work to understand code navigation challenges. In: Proceedings of the 19th International
+            ACM SIGACCESS Conference on Computers and Accessibility. 2017. p. 91-100.</cite></li>
+        <br>
+        <li><cite>ALOTAIBI, Hind; S. AL-KHALIFA, Hend; ALSAEED, Duaa. Teaching programming to students with vision
+            impairment: Impact of tactile teaching strategies on student's achievements and perceptions.
+            Sustainability, v. 12, n. 13, p. 5320, 2020.</cite></li>
+        <br>
+        <li><cite>ARMALY, Ameer; RODEGHERO, Paige; MCMILLAN, Collin. Audiohighlight: Code skimming for blind
+            programmers. In: 2018 IEEE International Conference on Software Maintenance and Evolution (ICSME). IEEE,
+            2018. p. 206-216.</cite></li>
+        <br>
+        <li><cite>BAKER, Catherine M.; BENNETT, Cynthia L.; LADNER, Richard E. Educational experiences of blind
+            programmers. In: Proceedings of the 50th ACM Technical Symposium on Computer Science Education. 2019. p.
+            759-765.</cite></li>
+        <br>
+        <li><cite>DA SILVA, Cláudia Ferreira; FERREIRA, Simone Bacellar Leal; RAMOS, João Felipe Moreira. WhatsApp
+            accessibility from the perspective of visually impaired people. In: Proceedings of the 15th Brazilian
+            Symposium on Human Factors in Computing Systems. 2016. p. 1-10.</cite></li>
+        <br>
+        <li><cite>GERALDO, Rafael José. Um auxílio à navegação acessível na web para usuários cegos. 2016. Tese de
+            Doutorado. Universidade de São Paulo.</cite></li>
+        <br>
+        <li><cite>HUFF, Earl W. et al. Examining the work experience of programmers with visual impairments. In:
+            2020 IEEE international conference on software maintenance and evolution (ICSME). IEEE, 2020. p.
+            707-711.</cite></li>
+        <br>
+        <li><cite>HUTCHINSON, Joe; METATLA, Oussama. An initial investigation into non-visual code structure
+            overview through speech, non-speech and spearcons. In: Extended Abstracts of the 2018 CHI Conference on
+            Human Factors in Computing Systems. 2018. p. 1-6.</cite></li>
+        <br>
+        <li><cite>ISO/IEC (2018). ISO/IEC 9241. Ergonomia da interação humano-sistema. Parte 171: Orientaçõees sobre
+            acessibilidade de software.</cite></li>
+        <br>
+        <li><cite>KEARNEY-VOLPE, Claire; HURST, Amy. Accessible web development: Opportunities to improve the
+            education and practice of web development with a screen reader. ACM Transactions on Accessible Computing
+            (TACCESS), v. 14, n. 2, p. 1-32, 2021.</cite></li>
+        <br>
+        <li><cite>MEALIN, Sean; MURPHY-HILL, Emerson. An exploratory study of blind software developers. In: 2012
+            ieee symposium on visual languages and human-centric computing (VL/HCC). IEEE, 2012. p. 71-74.</cite>
+        </li>
+        <br>
+        <li><cite>MOUNTAPMBEME, Aboubakar; OKAFOR, Obianuju; LUDI, Stephanie. Addressing Accessibility Barriers in
+            Programming for People with Visual Impairments: A Literature Review. ACM Transactions on Accessible
+            Computing (TACCESS), v. 15, n. 1, p. 1-26, 2022.</cite></li>
+        <br>
+        <li><cite>PANDEY, Maulishree et al. Accessibility of UI Frameworks and Libraries for Programmers with Visual
+            Impairments. In: 2022 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). IEEE,
+            2022. p. 1-10.</cite></li>
+        <br>
+        <li><cite>PETRAUSCH, Vanessa; LOITSCH, Claudia. Accessibility analysis of the eclipse ide for users with
+            visual impairment. In: Harnessing the Power of Technology to Improve Lives. IOS Press, 2017. p.
+            922-929.</cite></li>
+        <br>
+        <li><cite>POTLURI, Venkatesh et al. A multi-modal approach for blind and visually impaired developers to
+            edit webpage designs. In: Proceedings of the 21st International ACM SIGACCESS Conference on Computers
+            and Accessibility. 2019. p. 612-614.</cite></li>
+        <li><cite>POTLURI, Venkatesh et al. Codetalk: Improving programming environment accessibility for visually
+            impaired developers. In: Proceedings of the 2018 chi conference on human factors in computing systems.
+            2018. p. 1-11.</cite></li>
+        <br>
+        <li><cite>SAMPATH, Harini; MERRICK, Alice; MACVEAN, Andrew. Accessibility of command line interfaces. In:
+            Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems. 2021. p. 1-10.</cite></li>
+        <br>
+        <li><cite>SCHANZER, Emmanuel; BAHRAM, Sina; KRISHNAMURTHI, Shriram. Accessible AST-based programming for
+            visually-impaired programmers. In: Proceedings of the 50th ACM Technical Symposium on Computer Science
+            Education. 2019. p. 773-779.</cite></li>
+        <br>
+        <li><cite>SIEGFRIED, Robert M. Visual programming and the blind: the challenge and the opportunity. ACM
+            SIGCSE Bulletin, v. 38, n. 1, p. 275-278, 2006.</cite></li>
+        <br>
+        <li><cite>SMITH, Ann C. et al. Nonvisual tool for navigating hierarchical structures. ACM SIGACCESS
+            Accessibility and Computing, n. 77-78, p. 133-139, 2003.</cite></li>
+        <br>
+        <li><cite>STEFIK, Andreas et al. Sodbeans. In: 2009 IEEE 17th International Conference on Program
+            Comprehension. IEEE, 2009. p. 293-294.</cite></li>
+        <br>
+        <li><cite>W3C, W. W. W. C. (2018). Diretrizes de acessibilidade para conteúdo web (WCAG) 2.1. Disponível em:
+            <a href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/.">
+              https://www.w3c.br/traducoes/wcag/wcag21-pt-BR./ </a></cite></li>
+        <br>
+        <br>
+        <li><cite>Zen, Eliana, da Costa, Viníciius K., and Tavares, Tatiana A. Understanding the Accessibility
+            Barriers Faced by Learners with Visual Impairments in Computer Programming. In: XXII Simpósio Brasileiro
+            sobre Fatores Humanos em Sistemas Computacionais, 2023.</cite></li>
+      </ul>
+    </div>
+    <br>
+    <footer><a id="voltatopo" href="#titulo">Voltar para o topo.</a></footer>
+
+
+  </div>
+
+  <div id="rolagemSumario" class="sumario">
+    <h2 id="tituloSumario">SUMÁRIO</h2>
+    <ol>
+
+      <a href="#intro">
+        <li>
+          <h3 class="itemSumario">1. Introdução</h3>
+        </li>
+      </a>
+      <a href="#organizacao">
+        <li>
+          <h3 class="itemSumario">2. Estrutura e Organização das Diretrizes</h3>
+        </li>
+      </a>
+      <div class="listaSumario">
+        <a href="#dir">
+          <li>
+            <h3 class="itemSumario">3. Diretrizes</h3>
+            <ul>
+              <a href="#catUm">
+                <li>
+                  <h4 class="itemSumario">Categoria 1: Compreensão do código </h4>
+                  <ul>
+                    <a href="#sem">
+                      <li class="itemSumario">
+                        Diretriz 1.1 Semântica
+                      </li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catDois">
+                <li>
+                  <h4 class="itemSumario">Categoria 2: Depuração de código </h4>
+                  <ul>
+                    <a href="#infoErros">
+                      <li class="itemSumario"> Diretriz 2.1 Informações sobre erros </li>
+                    </a>
+                    <a href="#varConst">
+                      <li class="itemSumario">Diretriz 2.2 Variáveis e constantes </li>
+                    </a>
+                    <a href="#marcPontos">
+                      <li class="itemSumario">Diretriz 2.3 Marcadores e Pontos de interrupção</li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catTres">
+                <li>
+                  <h4 class="itemSumario">Categoria 3: Navegação no código </h4>
+                  <ul>
+                    <a href="#rot">
+                      <li class="itemSumario">Diretriz 3.1 Rótulos</li>
+                    </a>
+                    <a href="#ampl">
+                      <li class="itemSumario">Diretriz 3.2 Ampliação e Contraste</li>
+                    </a>
+                    <a href="#mov">
+                      <li class="itemSumario">Diretriz 3.3 Movimentação pelo código</li>
+                    </a>
+                    <a href="#contNivel">
+                      <li class="itemSumario">Diretriz 3.4 Contexto e nível de escopo</li>
+                    </a>
+                    <a href="#estNav">
+                      <li class="itemSumario">Diretriz 3.5 Estratégias de navegação</li>
+                    </a>
+                    <a href="#numLinhas">
+                      <li class="itemSumario">Diretriz 3.6 Numeração de linhas</li>
+                    </a>
+                    <a href="#atalhos">
+                      <li class="itemSumario">Diretriz 3.7 Atalhos</li>
+                    </a>
+                    <a href="#ajudaDoc">
+                      <li class="itemSumario">Diretriz 3.8 Ajuda e Documentação</li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catQuatro">
+                <li>
+                  <h4 class="itemSumario"> Categoria 4: Edição de código </h4>
+                  <ul>
+                    <a href="#esp">
+                      <li class="itemSumario">Diretriz 4.1 Espaçamento</li>
+                    </a>
+                    <a href="#auto">
+                      <li class="itemSumario">Diretriz 4.2 Autocompletar</li>
+                    </a>
+                    <a href="#coment">
+                      <li class="itemSumario">Diretriz 4.3 Comentários</li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catCinco">
+                <li>
+                  <h4 class="itemSumario"> Categoria 5: Skimming de código</h4>
+                  <ul>
+                    <a href="#dobraCod">
+                      <li class="itemSumario">Diretriz 5.1 Dobra de Código</li>
+                    </a>
+                    <a href="#visaoCod">
+                      <li class="itemSumario">Diretriz 5.2 Visão geral do código</li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catSeis">
+                <li>
+                  <h4 class="itemSumario"> Categoria 6: Compreensão da Saída </h4>
+                  <ul>
+                    <a href="#valInt">
+                      <li class="itemSumario">Diretriz 6.1 Validação da interface gráfica</li>
+                    </a>
+
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catSete">
+                <li>
+                  <h4 class="itemSumario">Categoria 7: Sobrecarga auditiva</h4>
+                  <ul>
+                    <a href="#alertSon">
+                      <li class="itemSumario">Diretriz 7.1 Alertas sonoros</li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+            <ul>
+              <a href="#catOito">
+                <li>
+                  <h4 class="itemSumario">Categoria 8: Leitura de código-fonte</h4>
+                  <ul>
+                    <a href="#idi">
+                      <li class="itemSumario">Diretriz 8.1 Idioma </li>
+                    </a>
+                    <a href="#leiCont">
+                      <li class="itemSumario">Diretriz 8.2 Leitura contextual </li>
+                    </a>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+          </li>
+        </a>
+      </div>
+      <a href="#ref">
+        <li>
+          <h3 class="itemSumario">4. Referências Bibliográficas</h3>
+        </li>
+
+      </a>
+    </ol>
+
+  </div>
+
+</body>
+
+</html>
