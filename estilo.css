@@ -192,3 +192,14 @@ footer {
   padding: 1vh;
   border-radius: 1vh;
 }
+
+#glossario li {
+  margin-top: 1vh;
+}
+#glossario ul {
+  list-style-type: none;
+}
+
+.comofazer li {
+  margin-top: 1vh;
+}
