@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estiloCartilhaWeb.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="head">
+    <h1 id="titulo"> Orientação para o ensino de programação de Computadores para estudantes cegos</h1>
+    <hr class="linha">
+
+    <section>
+      <h2 id="apresentacao">1. Apresentação</h2>
+      <hr class="linha">
+      <p>Estudantes de cursos de computação frequentemente enfrentam diversos desafios e obstáculos ao longo de seus
+        estudos [<a href="#r5">5</a>], em especial, nas disciplinas que envolvem Programação de Computadores. No caso de
+        estudantes cegos,
+        surgem várias barreiras adicionais durante o processo de aprendizagem [<a href="#r14">14</a>], que podem
+        impactar
+        negativamente no
+        engajamento e na dedicação desses estudantes,
+        comprometendo a sua formação e preparação para ingressar no mercado de trabalho.
+      </p>
+      <p> Neste sentido, esta Cartilha foi elaborada para apoiar os professores de disciplinas relacionadas à
+        Programação
+        de Computadores no planejamento e na condução das aulas para estudantes cegos. São apresentadas informações
+        sobre os principais desafios enfrentados por esses estudantes e fornecidas orientações sobre a elaboração e
+        seleção de materiais, tarefas e estratégias de avaliação, além de uma lista de ferramentas que podem aprimorar a
+        acessibilidade e auxiliar esses estudantes durante o processo de aprendizado.</p>
+
+      <h3 id="objetivos">Objetivos</h3>
+      <p>O principal objetivo desta Cartilha é fornecer orientações para que os professores propiciem uma experiência
+        educacional mais
+        inclusiva e eficaz para todos os estudantes, independentemente de suas limitações visuais. Para isso,
+        pretende-se atender aos seguintes propósitos:</p>
+      <ul>
+        <li>Apresentar os principais desafios e limitações encontrados por estudantes cegos nas disciplinas relacionadas
+          à Programação de Computadores;</li>
+        <li>Sugerir estratégias para que professores propiciem um ambiente mais inclusivo para os estudantes cegos
+          nessas disciplinas;</li>
+        <li>Oferecer orientações para auxiliar o planejamento das aulas e a seleção e adaptação de materiais, atividades
+          e estratégias de avaliação; e,</li>
+        <li>Listar recursos e ferramentas que podem proporcionar uma maior acessibilidade aos estudantes cegos.</li>
+      </ul>
+
+      <h3 id="licencaUso">Licença de Uso</h3>
+      <p>Esta Cartilha é disponibilizada sob a licença "Creative Commons Atribuição - Uso não comercial - Sem
+        derivações
+        4.0 Internacional" (CC BY-NC 4.0 DEED). Qualquer pessoa que tenha acesso ao seu conteúdo pode copiá-lo e
+        compartilhá-lo, desde que atribua crédito aos autores, não realize alterações e não utilize a obra para fins
+        comerciais.</p>
+
+      <h3 id="publicoAlvo">Publico-alvo</h3>
+      <p>A Cartilha tem como público-alvo:</p>
+      <ul>
+        <li>Professores que lecionam disciplinas relacionadas à Programação de Computadores para estudantes cegos; e,
+        </li>
+        <li>Pedagogos, Educadores Especiais e outros profissionais que precisem orientar professores para condução das
+          aulas dessas disciplinas.</li>
+      </ul>
+
+      <h3 id="siglas">Siglas</h3>
+      <ul>
+        <li><strong>IDE: </strong> <i>Integrated Development Environment Job Access With Speech</i></li>
+        <li><strong>JAWS: </strong><i>Job Access With Speech</i></li>
+        <li><strong>NVDA: </strong><i>NonVisual Desktop Access</i>
+        </li>
+        <li><strong>SodBeans: </strong><i>Sonified Omniscient Debugger no Netbeans</i></li>
+        <li><strong>TA: </strong>Tecnologia Assistiva</li>
+        <li><strong>UFRJ: </strong>Universidade Federal do Rio de Janeiro</li>
+        <li><strong>VSCode: </strong><i>Visual Studio Code</i></li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h2 id="visaoGeral">2. Visão geral da deficiência visual</h2>
+      <hr class="linha">
+      <p> O <a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm" target="_blank">DECRETO
+          5.296</a> [<a href="#r9">9</a>], de 02 de dezembro de 2004, define a deficiência visual como sendo:
+      </p>
+      <ul>
+        <li>cegueira, quando acuidade visual¹ menor ou igual de 0,05 no melhor olho, com a melhor correção óptica;</li>
+        <li>baixa visão, quando acuidade visual entre 0,3 e 0,05 no melhor olho, com a melhor correção óptica;</li>
+        <li>os casos em que a soma da medida do campo visual2 em ambos os olhos for igual ou menor que 60°; ou,</li>
+        <li>a ocorrência simultânea de qualquer das condições anteriores.</li>
+      </ul>
+      <p>A cegueira ocorre quando há perda total da visão, pouquíssima capacidade de enxergar [<a href="#r10">10</a>],
+        até
+        a ausência de projeção de luz [<a href="#r8">8</a>]. </p>
+      <p>A baixa visão ou visão subnormal, por sua vez, é caracterizada pelo comprometimento do funcionamento visual dos
+        olhos, mesmo após tratamento ou correção [<a href="#r1">1</a>].</p>
+
+      <div class="nota">
+        <ol>
+          <li>Capacidade do sistema visual de discriminar dois pontos de alto contraste no espaço <a
+              href="#r20">[20]</a>.
+          </li>
+          <li>Capacidade de percepção da amplitude ou extensão total da visão <a href="#r6">[6]</a> .</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="ta">3. Tecnologia Assistiva</h2>
+      <hr class="linha">
+      <p>Refere-se à pesquisa, produção e uso de equipamentos, recursos ou estratégias desenvolvidos para ampliar as
+        habilidades funcionais das pessoas com deficiência, proporcionando-lhes maior independência, qualidade de vida e
+        inclusão social [<a href="#r7">7</a>,<a href="#r3">3</a>].</p>
+      <p>Uma Tecnologia Assistiva (TA) pode ser tanto um dispositivo de hardware quanto de software, desenvolvido pela
+        indústria ou personalizado pelos próprios usuários finais [<a href="#r4">4</a>].</p>
+      <p>Nos ambientes digitais, recursos de TA são essenciais para proporcionar a inserção de usuários com deficiência
+        visual, pois promovem igualdade de oportunidades [<a href="#r13">13</a>] e propiciam liberdade e autonomia para
+        realizarem tarefas
+        difíceis sem dependerem de assistência visual [<a href="#r4">4</a>].</p>
+      <p>Em se tratando especificamente de Programação de
+        Computadores, os principais recursos de TA utilizados por pessoas com deficiência visual são os leitores de tela
+        e os Displays Braille.</p>
+      <h3 id="leitoresTela">Leitores de Tela</h3>
+      <p>Software que captura as informações textuais exibidas em dispositivos eletrônicos e as
+        converte em saída de
+        áudio,
+        utilizando voz sintetizada [<a href="#r10">10</a>,<a href="#r11">11</a>].
+      </p>
+      <p>Normalmente, os leitores de telas realizam a leitura sequencial da interface, uma linha por
+        vez, iniciando na
+        parte superior à
+        esquerda e seguindo pela direita [<a href="#r2">2</a>].</p>
+      <p>Leitores de tela mais conhecidos:</p>
+      <ul>
+        <li><strong>JAWS</strong> (<i>Job Access With Speech</i>). Desenvolvido pela empresa Freedom Scientific
+          para Microsoft
+          Windows.</li>
+        <a href="https://www.freedomscientific.com/products/software/jaws/"
+          target="_blank">https://www.freedomscientific.com/products/software/jaws/</a>
+
+        <li><strong>NVDA</strong> (<i>NonVisual Desktop Access</i>). Sistema de código aberto desenvolvido pela NV
+          Access para
+          Microsoft Windows.</li>
+        <a href="https://www.nvaccess.org/" target="_blank">https://www.nvaccess.org/</a>
+
+        <li><strong>Virtual Vision.</strong> Software brasileiro desenvolvido para Microsoft Windows</li>
+        <a href="https://www.virtualvision.com.br/" target="_blank">https://www.virtualvision.com.br/</a>
+
+        <li><strong>Orca.</strong> Software livre, de código aberto, flexível e extensível para Linux e Solaris.
+        </li>
+        <a href="https://help.gnome.org/users/orca/" target="_blank">https://help.gnome.org/users/orca/</a>
+
+        <li><strong>DosVox.</strong> Desenvolvido pela Universidade Federal do Rio de
+          Janeiro (UFRJ) para Microsoft Windows.</li>
+        <a href="https://intervox.nce.ufrj.br/dosvox/" target="_blank">https://intervox.nce.ufrj.br/dosvox/</a>
+
+        <li><strong>VoiceOver.</strong> Leitor de telas para watchOS, iOS, iPadOS e macOS.</li>
+        <a href="https://www.apple.com/br/accessibility/vision/"
+          target="_blank">https://www.apple.com/br/accessibility/vision/</a>
+
+        <li><strong>TalkBack.</strong> Desenvolvido pela Google, incluído em dispositivos móveis que utilizam Android.
+        </li>
+        <a href="https://support.google.com/accessibility/android/#topic=9078845"
+          target="_blank">https://support.google.com/accessibility/android/#topic=9078845</a>
+      </ul>
+
+      <h3 id="displaysBraille">Displays Braille</h3>
+      <p>Dispositivo eletromecânico que traduz informações digitais em caracteres braile [<a href="#r4">4</a>].</p>
+      <p>Disponíveis em diferentes. tamanhos (quantidade de linhas), transmitem as informações
+        utilizando pinos de ponta redonda dinamicamente elevados em uma superfície plana [<a href="#r18">18</a>].</p>
+      <p>No caso de Programação de Computadores, podem auxiliar: </p>
+      <ul>
+        <li>Na leitura do código,
+          proporcionando uma visão mais abrangente de sua estrutura;
+        </li>
+        <li>Na identificação de indentação em um código-fonte; e,</li>
+        <li>Na redução da carga auditiva³.</li>
+      </ul>
+
+      <div class="nota">
+        <p>³Estresse experimentado quando muitas informações são transmitidas pelo canal de áudio [<a href="#r4">4</a>]
+        </p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2 id="desafios">4. Desafios enfrentados por estudantes cegos</h2>
+      <hr class="linha">
+      <p>Programação de Computadores pode ser descrita como o processo de escrever, testar, depurar e manter o
+        código-fonte de programas [<a href="#r21">21</a>], para instruir um computador a solucionar problemas [<a
+          href="#r15">15</a>].</p>
+      <p>Para programar, é necessário utilizar uma sequência de instruções ou comandos textuais específicos, escritos em
+        linguagem de programação [<a href="#r21">21</a>].</p>
+      <p>Essa é uma área que requer a compreensão de conceitos abstratos [<a href="#r16">16</a>] e o desenvolvimento de
+        habilidades e
+        competências para conceber programas que solucionem problemas reais, o que pode ser desafiador para estudantes
+        iniciantes [<a href="#r12">12</a>].</p>
+      <p>No caso específico de estudantes cegos, a ausência da visão pode impor obstáculos tanto para o processo de
+        leitura e escrita de código-fonte quanto para a utilização das ferramentas que oferecem suporte a realização
+        dessas atividades.</p>
+
+      <h3 id="desafiosTecnologicos">Desafios Tecnológicos</h3>
+      <p>Os leitores de tela são o recurso de Tecnologia Assistiva mais utilizados por estudantes cegos, mas apresentam
+        algumas limitações quando utilizados em conjunto com ferramentas e ambientes de programação:</p>
+      <ul>
+        <li>Navegam pela interface gráfica do IDE e pelo código-fonte de forma linear, obrigando o usuário a percorrer o
+          código uma linha de cada vez, em sequência [<a href="#r4">4</a>][<a href="#r19">19</a>].</li>
+        <li>Não verbalizam o código-fonte de maneira que faça sentido para o ouvinte o que pode acarretar omissão de
+          partes importante ou a transmissão inadequada das informações.</li>
+        <li>Não interpretam caracteres não-alfanuméricos e não identificam partes relevantes ou irrelevantes do código,
+          podendo tornar a leitura incompreensível para o ouvinte.</li>
+        <li>A grande variedade de funcionalidades oferecidas pelos IDEs para aumentar a produtividade e eficiência dos
+          programadores pode resultar em interfaces complexas que não são totalmente acessíveis aos leitores de tela.
+        </li>
+      </ul>
+      <p>Quando os IDEs adotados pelos professores e colegas nas disciplinas não atendem a todas as necessidades de
+        acessibilidade dos estudantes cegos, esses estudantes costumam procurar por soluções alternativas para
+        realização das atividades.</p>
+      <p>Ao fazer isso, alguns desafios podem surgir:</p>
+      <ul>
+        <li>Quando essas soluções não são as mesmas utilizadas pelos colegas, os estudantes cegos podem não ter a quem
+          recorrer caso necessitem de ajuda para utilizá-las.</li>
+        <li>Ao realizarem atividades em grupo ou que requerem a colaboração dos colegas, pode ser difícil contribuir e
+          compreender as ações que são realizadas.</li>
+        <li>Normalmente, esses recursos possuem funcionalidades
+          reduzidas, o que pode impactar em maior tempo para concluir as atividades e maior esforço cognitivo, causando
+          frustração nos estudantes.</li>
+      </ul>
+
+      <h3 id="desafiosEducacionais">Desafios Educacionais</h3>
+      <h4>Obtenção do contexto das falas:</h4>
+      <ul>
+        <li>Durante as aulas presenciais ou em palestras, geralmente, quem está falando não verbaliza ou descreve todas
+          as informações transmitidas quando utiliza gestos, imagens ou escreve algo no quadro, o que pode dificultar a
+          compreensão adequada do conteúdo pelos estudantes.</li>
+        <li>Ao utilizar ferramentas de compartilhamento de tela ou videoaulas, há problemas relacionados ao fato de que
+          o leitor de tela não consegue pronunciar o que está sendo exibido, porque as informações são transmitidas como
+          uma imagem.</li>
+        <li>Por não poderem observar o que está sendo digitado e exibido na tela, os estudantes cegos podem perder
+          informações importantes caso não sejam pronunciadas todas as particularidades do código.
+          <ul>
+            <li>Considerando a natureza imperativa da sintaxe na
+              computação, qualquer erro de digitação pode confundi-los</li>
+          </ul>
+        </li>
+        <li>A velocidade da fala dos professores também pode ser um obstáculo, pois os estudantes podem ter dificuldade
+          para acompanhar as atividades e compreender as explicações.</li>
+      </ul>
+
+      <h4>Acessibilidade dos materiais de apoio:</h4>
+      <ul>
+        <li>É difícil obter livros, apostilas e tutoriais em formato acessível e em tempo hábil para o melhor
+          acompanhamento das aulas se realização das atividades solicitadas nas disciplinas.</li>
+        <li>A produção de livros didáticos em braile é demorada, requer equipamentos e conhecimentos especializados e
+          tem um custo elevado. Além disso, alguns estudantes podem não estar familiarizados com esse sistema de
+          escrita.</li>
+        <li>Os audiolivros são bastante acessíveis, pois proporcionam uma leitura contextual do conteúdo. No entanto, a
+          obtenção de materiais nesse formato é desafiadora, e aqueles disponíveis, geralmente estão em língua inglesa.
+        </li>
+        <li>Materiais de apoio impressos, quando escaneados em formato de imagem, não podem ser lidos pelos leitores de
+          tela.</li>
+        <li>Quando os materiais usados pelo professor não são acessíveis aos leitores de tela, os estudantes precisam
+          encontrar soluções alternativas, que nem sempre atendem completamente às suas necessidades.</li>
+      </ul>
+
+      <h4>Tarefas, atividades e avaliações:</h4>
+      <ul>
+        <li>Por vezes, estudantes cegos precisam utilizar ferramentas diferentes dos colegas, construir sistemas
+          alternativos, necessitam de auxílio humano, realizam avaliações apenas com base nos componentes acessíveis ou
+          são dispensados totalmente de algumas atividades ou avaliações.
+          <ul>
+            <li>O estudante pode se sentir isolado dos colegas quando ele é a única pessoa a trabalhar com um parceiro
+              ou a construir um sistema completamente diferente dos demais.</li>
+            <li>Essas disparidades podem desmotivar os estudantes.</li>
+          </ul>
+        </li>
+        <li>Tarefas que exigem trabalho em grupo podem ser desafiadoras, porque pode ser difícil acompanhar a sua
+          execução ou se comunicar com os colegas.</li>
+        <li>Falhas de comunicação podem surgir quando o monitor designado para auxiliar o estudante não tem domínio das
+          ferramentas ou do conteúdo estudado.
+          <ul>
+            <li>Se o monitor não estiver familiarizado com o tema abordado, pode não conseguir descrever adequadamente o
+              conteúdo ou o enunciado de uma questão, o que prejudicaria o entendimento ou a transcrição das respostas
+              do estudante.</li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section>
+      <h2 id="estrategias">5. Estratégias para ensinar programação</h2>
+      <hr class="linha">
+      <p>Algumas estratégias podem ser adotadas no intuito de melhorar a aprendizagem dos estudantes cegos e
+        proporcionar um ambiente de aprendizagem mais inclusivo.</p>
+
+
+      <h3 id="apresentacaoProf">Apresentação do Professor</h3>
+      <ul>
+        <li>Ao se apresentar para o estudante com deficiência visual, o professor pode descrever algumas de suas
+          características mais marcantes (atributos físicos, etnia, estatura, etc.), permitindo que o estudante possa
+          criar uma imagem mental do professor e associe a voz deste professor à disciplina que estiver sendo
+          ministrada.</li>
+      </ul>
+
+
+      <h3 id="obtencao">Obtenção do contexto das falas</h3>
+      <ul>
+        <li>Pronunciar todos os detalhes do código-fonte que estiver sendo digitado ou apresentado: letras
+          maiúsculas/minúsculas, caracteres não-alfanuméricos, etc.
+          <ul>
+            <li>É importante esclarecer a importância de utilizá-los.</li>
+          </ul>
+        </li>
+        <li>Descrever verbalmente tudo o que for relevante e que esteja sendo anotado no quadro ou exibido na tela.
+        </li>
+      </ul>
+
+      <h3 id="tecnologias">Tecnologias</h3>
+      <ul>
+        <li>Testar previamente se todas as ferramentas que serão adotadas na disciplina para verificar se são acessíveis
+          aos leitores de tela.</li>
+        <li>Explorar soluções alternativas que forneçam o suporte de acessibilidade necessário quando as ferramentas
+          utilizadas não forem completamente acessíveis.
+          <ul>
+            <li>Adotar, sempre que possível, recursos e ferramentas que possam ser utilizados por todos os estudantes da
+              turma.</li>
+          </ul>
+        </li>
+        <li>Fornecer tutoriais e guias acessíveis para instalação e utilização das ferramentas adotadas nas disciplinas
+          e para configuração dos recursos de acessibilidade;</li>
+        <li>Disponibilizar um resumo contendo todos os atalhos de teclado necessários para acessar as funcionalidades
+          das ferramentas que serão utilizadas nas aulas.
+        </li>
+      </ul>
+
+      <h3 id="materiaisApoio">Materiais de apoio</h3>
+      <ul>
+        <li>Enviar todos os materiais e códigos-fonte que serão utilizados em cada aula em um formato acessível.
+          <ul>
+            <li>Esses materiais estar disponíveis aos estudantes com antecedência suficiente para que eles possam
+              estudá-los antecipadamente e se prepararem melhor para as aulas e realização das atividades solicitadas
+              nas disciplinas.</li>
+          </ul>
+        </li>
+
+        <li>Digitalizar os materiais impressos em formato de texto ou de áudio.
+          <ul>
+            <li>Transcrições para áudio devem ser realizadas por alguém familiarizado com o conteúdo, facilitando a
+              compreensão do código-fonte. Isso porque o leitor saberia "o que deve ser lido" e "como deve ser lido",
+              considerando aspectos como pontuação e formatação, por exemplo.</li>
+          </ul>
+        </li>
+        <li>Disponibilizar audiolivros aos estudantes sempre que possível. </li>
+        <li>Utilizar materiais táteis para explicar o conteúdo ou para oferecer melhor feedback dos resultados aos
+          estudantes.</li>
+        <li>Descrever todas as imagens contidas nos materiais de apoio ou apresentados em aula e que forem importantes
+          para a compreensão do conteúdo.</li>
+      </ul>
+
+      <h3 id="tarefas">Tarefas, atividades e avaliações</h3>
+      <ul>
+        <li>Elaborar questões que possam ser respondidas, preferencialmente, em formato textual.</li>
+        <li>Selecionar monitores de disciplina que tenham conhecimento dos recursos tecnológicos e do conteúdo que
+          estiverem sendo estudados.</li>
+        <li>Substituir tarefas que dependam exclusivamente da visão por alternativas mais inclusivas e que possam
+          realizadas por todos os estudantes da turma.</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h2 id="recursos">6. Recursos Úteis</h2>
+      <hr class="linha">
+      <ul>
+        <li><strong>AccessComputing</strong>
+          <br>
+          <a href="https://www.washington.edu/accesscomputing/"
+            target="_blank">https://www.washington.edu/accesscomputing/</a>
+          <p>Disponibilizada pela Universidade de Washington, essa plataforma permite que estudantes universitários e de
+            pós-graduação com deficiência se conectem com mentores e profissionais para obter informações sobre estágios
+            e outras oportunidades nas áreas de computação. Também auxilia instituições de ensino superior e outras
+            organizações a promover a inclusão de pessoas com deficiência na educação e no mercado de trabalho em
+            tecnologia da informação.</p>
+        </li>
+
+        <li><strong>Audio Descrição</strong>
+          <br>
+          <a href="http://audiodescricao.com.br/ad/" target="_blank">http://audiodescricao.com.br/ad/</a>
+          <p>Fornece recursos que permitem a inclusão de pessoas com deficiência visual em cinema, teatro e programas de
+            televisão.</p>
+        </li>
+
+        <li><strong>Blocks4All</strong>
+          <br>
+          <a href="https://milnel2.github.io/blocks4alliOS/"
+            target="_blank">https://milnel2.github.io/blocks4alliOS/</a>
+          <p>Ambiente de programação baseado em blocos desenvolvido para iPad, para ensino de programação de
+            computadores para pessoas com deficiência visual. Nesse ambiente, o usuário utiliza comandos de voz para
+            controlar um robô Dash e movimentar os blocos. Permite trabalhar conceitos de programação como variáveis,
+            tipos de dados e estruturas de controle.
+          </p>
+        </li>
+
+        <li><strong> CodeJumper</strong>
+          <br>
+          <a href="https://codejumper.com/index.php" target="_blank">https://codejumper.com/index.php</a>
+          <p>Ambiente de programação tangível desenvolvido pela Microsoft Research Cambridge projetada para alunos cegos
+            ou com baixa visão. Inclui um kit físico composto por um hub, pods, plugues e cabos, além de um aplicativo
+            compatível com leitores de tela e Displays Braille.
+          </p>
+        </li>
+
+        <li><strong>Code Talk</strong>
+          <br>
+          <a href="https://microsoft.github.io/CodeTalk/" target="_blank">https://microsoft.github.io/CodeTalk/</a>
+          <p>Plug-in de acessibilidade desenvolvido para Microsoft Visual Studio que aborda em três principais aspectos
+            da programação:</p>
+          <ol>
+            <li>oferece um resumo acessível da estrutura do código-fonte;</li>
+            <li>possibilita acesso a
+              informações em tempo real;</li>
+            <li>torna as atividades de depuração de código mais acessíveis.</li>
+          </ol>
+
+        </li>
+
+        <li><strong>Developer toolkit (DTK)</strong>
+          <br>
+          <a href="https://addons.nvda-project.org/addons/developerToolkit.en.html"
+            target="_blank">https://addons.nvda-project.org/addons/developerToolkit.en.html</a>
+          <p>Plug-in para NVDA que auxilia usuários cegos no desenvolvimento de interfaces de usuário e conteúdo web,
+            oferecendo ferramentas para navegar pelos objetos e acessar informações sobre eles, como tamanho, posição e
+            características.
+          </p>
+        </li>
+
+        <li><strong>Donnie</strong>
+          <br>
+          <a href="https://github.com/lsa-pucrs/donnie-assistive-robot-sw"
+            target="_blank">https://github.com/lsa-pucrs/donnie-assistive-robot-sw</a>
+          <p>Ambiente de programação de robô projetado para estimular as habilidades de orientação e mobilidade de
+            pessoas com deficiência visual através da exploração de cenários.
+            O sistema conta com uma linguagem de programação (GoDonnie), um robô simulado e um robô físico baseado em
+            Arduino, permitindo abordar conteúdos relacionados a programação de computadores como tipos de dados e
+            estruturas de controle.
+          </p>
+        </li>
+
+        <li><strong>JavaSpeak</strong>
+          <br>
+          <a href="https://cs.winona.edu/cscap/javaspeak.html"
+            target="_blank">https://cs.winona.edu/cscap/javaspeak.html</a>
+          <p>Ambiente de Desenvolvimento Integrado projetado para fornecer a um usuário cego informações úteis sobre a
+            estrutura e a semântica de um programa Java. A versão atual do JavaSpeak (3.0) é implementada como um
+            conjunto de plug-ins para o IDE Eclipse.</p>
+        </li>
+
+        <li><strong>Learning Ally</strong>
+          <br>
+          <a href="https://learningally.org/" target="_blank">https://learningally.org/</a>
+          <p>Organização sem fins lucrativos que fornece soluções educacionais e uma biblioteca de audiolivros lidos por
+            humanos especialistas no assunto. Inclui vários livros relacionados à diversos temas e áreas, incluindo
+            Ciência da Computação e Programação de Computadores. Entretanto, a maioria dos livros está em língua inglesa
+          </p>
+        </li>
+
+        <li><strong>Noodle</strong>
+          <br>
+          <a href="https://hackage.haskell.org/package/noodle"
+            target="_blank">https://hackage.haskell.org/package/noodle</a>
+          <p>Ambiente de programação acessível para criação de som e música em que os elementos do programa podem ser
+            inseridos e organizados apenas por meio de comandos do teclado.
+          </p>
+        </li>
+
+        <li><strong>Quorum Programming Language</strong>
+          <br>
+          <a href="https://quorumlanguage.com/" target="_blank">https://quorumlanguage.com/</a>
+          <p>Linguagem de programação baseada em evidências criada para simplificar a sintaxe e fornecer acessibilidade
+            para alunos cegos ou com deficiência visual.</p>
+        </li>
+
+        <li><strong>SodBeans (SonifiedOmniscient Debugger no
+            Netbeans)
+          </strong>
+          <br>
+          <a href="https://sourceforge.net/projects/sodbeans/"
+            target="_blank">https://sourceforge.net/projects/sodbeans/</a>
+          <p>Plug-in de acessibilidade para NetBeans que adiciona suporte para a linguagem de programação Quorum.
+          </p>
+        </li>
+
+        <li><strong>Visual Studio Code</strong>
+          <br>
+          <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+          <p>Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS que fornece vários de
+            acessibilidade para pessoas com deficiência visual.</p>
+        </li>
+
+        <li><strong>Web Accessibility Extension to Visual Studio Code</strong>
+          <br>
+          <a href="https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web
+          -accessibility" target="_blank">https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web
+            -accessibility</a>
+          <p>Fornece informações sobre a acessibilidade de uma interface originada a partir de um código-fonte,
+            identificando os elementos que requerem ajustes e oferecendo orientações sobre como realizar essas
+            alterações de forma aprimorar a acessibilidade.</p>
+        </li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h2 id="consideracoes">7. Considerações finais</h2>
+      <hr class="linha">
+      <p>Ao planejar e selecionar as tecnologias e materiais que serão utilizados nas aulas de Programação de
+        Computadores para estudantes cegos, é necessário que os professores tenham clareza de que os níveis de
+        familiaridade desses estudantes com Tecnologia Assistiva e com computadores pode variar consideravelmente. Por
+        exemplo, alguns estudantes podem estar familiarizados com leitores de tela, mas apresentar diferentes níveis de
+        familiaridade com o layout do teclado.</p>
+      <p>Além disso, estudantes com a mesma deficiência visual podem ter necessidades, preferências e hábitos distintos.
+        Em outras palavras, um abordagem eficaz para um estudante pode não ser tão útil para outro com a mesma
+        deficiência.</p>
+      <p>É essencial, portanto, dialogar com esses estudantes, explorar suas experiências anteriores, tanto as
+        bem-sucedidas quanto as que não deram certo, e então planejar as aulas e selecionar recursos que melhor atendam
+        a esses estudantes.</p>
+      <p>É fundamental, ainda, que os professores estejam familiarizados com as possibilidade de configuração de
+        acessibilidade oferecidos pelos Ambientes de Desenvolvimento Integrado e saibam usar os recursos de Tecnologia
+        Assistiva utilizados pelos estudantes.</p>
+      <p>Por fim, acredita-se que as metodologias, sugestões e recursos apresentados nesta Cartilha possam beneficiar a
+        aprendizagem de todos os estudantes, não apenas aqueles que são cegos.</p>
+    </section>
+
+    <section>
+      <h2 id="referencias">8. Referências Bibliográficas</h2>
+      <hr class="linha">
+      <div class="ref">
+        <ul>
+          <li id="r1">[1] <cite>AAO.ORG. American Academy of Ophthalmology. (Acesso: 06/19/2022),
+              <a href="https://www.aao.org/" target="_blank">https://www.aao.org/</a> .</cite>
+          </li>
+          <li id="r2">[2] <cite>ABREU, Stênio et al. Usability evaluation of a resource to read mathematical formulae in
+              a screen reader for people with visual disabilities. In: Proceedings of the 18th Brazilian Symposium on
+              Human Factors in Computing Systems. 2019. p. 1-11.</cite></li>
+          <li id="r3">[3] <cite>DE AJUDAS TÉCNICAS, Comitê. Tecnologia assistiva. Brasília: Corde, 2009</cite></li>
+          <li id="r4">[4] <cite>ALBUSAYS, Khaled; LUDI, Stephanie; HUENERFAUTH, Matt. Interviews and observation of
+              blind software developers at work to understand code navigation challenges. In: Proceedings of the 19th
+              International ACM SIGACCESS Conference on Computers and Accessibility. 2017. p. 91-100.
+            </cite></li>
+          <li id="r5">[5] <cite>BAKER, Catherine M.; BENNETT, Cynthia L.; LADNER, Richard E.
+              Educational experiences of blind programmers. In: Proceedings of the 50th ACM Technical Symposium on
+              Computer Science Education. 2019. p. 759-765.</cite></li>
+          <li id="r6">[6] <cite>BEAL, Franciele et al. Braille-CM-TUI: ambiente de apoio à construção de conhecimento
+              via mapas conceituais por estudantes com cegueira. 2020.</cite></li>
+          <li id="r7">[7] <cite>BERSCH, Rita. Introdução à tecnologia assistiva. Porto Alegre: CEDI, v. 21,
+              2008.</cite></li>
+          <li id="r8">[8] <cite>CARVALHO, Thiago et al. Saberes e práticas da inclusão:
+              desenvolvendo competências para o atendimento às necessidades educacionais especiais de alunos cegos e de
+              alunos com baixa visão. 2015</cite></li>
+          <li id="r9">[9] <cite>BRASIL. Decreto n5.296, 2 de dezembro de 2004. Brasília, DF, 2004. Disponível em:
+              <a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm">
+                https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm</a> Acesso em: 28 de novembro
+              de 2023</cite></li>
+          <li id="r10">[10] <cite>DA LUZ DIAS, James; DIAS, Maria da Luz Oliveira. Os leitores de tela como ferramenta
+              de acessibilidade e inclusão da pessoa com
+              Deficiência Visual. Brazilian Journal of Development, v. 5, n. 12, p. 28869-28878, 2019.</cite></li>
+          <li id="r11">[11] <cite>GERALDO, Rafael José. Um auxílio à navegação acessível na web para usuários cegos.
+              2016. Tese de Doutorado. Universidade de São Paulo.
+            </cite></li>
+          <li id="r12">[12] <cite>GOMES, Marina et al. Um estudo sobre erros em programação-
+              Reconhecendo as dificuldades de programadores iniciantes. In: Anais dos Workshops do Congresso Brasileiro
+              de Informática na Educação. 2015. p. 1398.</cite></li>
+          <li id="r13">[13] <cite>GUIMARÃES, Ítalo José Bastos et al. Acessibilidade em websites de comércio
+              eletrônico: avaliação através da interação com usuários cegos. 2016.</cite></li>
+          <li id="r14">[14] <cite>HADWEN-BENNETT, Alex; SENTANCE, Sue; MORRISON, Cecily. Making programming accessible
+              to learners with visual impairments: a literature review. International Journal of Computer Science
+              Education in Schools, v. 2, n. 2, p. 3-13, 2018.</cite></li>
+          <li id="r15">[15] <cite>HERMANS, Felienne; ALDEWERELD, Marlies. Programming is writing is programming. In:
+              Companion Proceedings of the 1st International
+              Conference on the Art, Science, and Engineering of Programming. 2017. p. 1-8.</cite></li>
+          <li id="r16">[16] <cite>LAHTINEN, Essi; ALA-MUTKA, Kirsti; JÄRVINEN, Hannu-Matti. A study of the difficulties
+              of novice programmers. Acm sigcse bulletin, v. 37, n. 3, p. 14-18, 2005.</cite></li>
+          <li id="r17">[17] <cite>LEITE, Luís Adelmo Barbosa; FREITAS, André Lage. Levantamento de Tecnologias de
+              Assistência à Educação para Pessoas com Deficiências Visuais. In: Anais do II Workshop de Desafios da
+              Computação aplicada à Educação. SBC, 2013. p. 1339-1348.</cite></li>
+          <li id="r18">[18] <cite>LEONARDIS, Daniele; CLAUDIO, Loconsole; FRISOLI, Antonio. A survey on innovative
+              refreshable braille display technologies. In: Advances in Design for Inclusion: Proceedings of the AHFE
+              2017 International Conference on Design for Inclusion, July 17-21, 2017, The Westin Bonaventure Hotel, Los
+              Angeles, California, USA 8. Springer International Publishing, 2018. p. 488-498.</cite></li>
+          <li id="r19">[19] <cite>MOUNTAPMBEME, Aboubakar; OKAFOR, Obianuju; LUDI, Stephanie. Addressing Accessibility
+              Barriers in Programming for People with Visual Impairments: A Literature Review. ACM Transactions on
+              Accessible Computing (TACCESS), v. 15, n. 1, p. 1-26, 2022.</cite></li>
+          <li id="r20">[20] <cite>SAÚDE, O. Organização Mundial da. Relatório Mundial sobre a Visão. [S.I.]: Light for
+              the World International, 2021. (Acesso: 06/15/2022).</cite></li>
+          <li id="r21">[21] <cite>SHARMA, Mamillapally Raghavender. A Short Communication on Computer Programming
+              Languages in Modern Era. Int. J. Comput. Sci. Mob. Comput, v. 9, p. 50-60, 2020.</cite></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div id="footer"></div>
+    </footer>
+
+  </div>
+
+  <aside>
+    <div id="rolagemSumario" class="sumario">
+      <h2 id="tituloSumario">SUMÁRIO</h2>
+      <div class="listaSumario">
+        <ol>
+          <a href="#apresentacao">
+            <li>
+              <h3 class="itemSumario">1. Apresentação </h3>
+            </li>
+            <ul>
+
+              <a href="#objetivos">
+                <li class="itemSumario">
+                  <h4>Objetivos</h4>
+                </li>
+              </a>
+
+              <a href="#licencaUso">
+                <li class="itemSumario">
+                  <h4>Licença de Uso </h4>
+                </li>
+              </a>
+
+              <a href="#publicoAlvo">
+                <li class="itemSumario">
+                  <h4>Publico Alvo</h4>
+                </li>
+              </a>
+
+              <a href="#siglas">
+                <li class="itemSumario">
+                  <h4>Siglas</h4>
+                </li>
+              </a>
+
+            </ul>
+
+          </a>
+
+          <a href="#visaoGeral">
+            <li>
+              <h3 class="itemSumario"> 2. Visão geral da deficiência visual</h3>
+            </li>
+          </a>
+
+          <a href="#ta">
+            <li>
+              <h3 class="itemSumario">3. Tecnologia Assistiva</h3>
+            </li>
+            <ul>
+
+              <a href="#leitoresTela">
+                <li class="itemSumario">
+                  <h4>Leitores de tela</h4>
+                </li>
+              </a>
+
+              <a href="#displaysBraille">
+                <li class="itemSumario">
+                  <h4>Displays Braille</h4>
+                </li>
+              </a>
+
+            </ul>
+
+          </a>
+
+
+          <a href="#desafios">
+            <li>
+              <h3 class="itemSumario">4. Desafios enfrentados por estudantes cegos</h3>
+            </li>
+            <ul>
+
+              <a href="#desafiosTecnologicos">
+                <li class="itemSumario">
+                  <h4>Desafios Tecnológicos</h4>
+                </li>
+              </a>
+
+              <a href="#desafiosEducacionais">
+                <li class="itemSumario">
+                  <h4>Desafios Educacionais</h4>
+                </li>
+              </a>
+
+            </ul>
+          </a>
+
+          <a href="#estrategias">
+
+            <li>
+              <h3 class="itemSumario">5. Estratégias para ensinar programação</h3>
+            </li>
+            <ul>
+
+              <a href="#apresentacaoProf">
+                <li class="itemSumario">
+                  <h4>Apresentação do professor</h4>
+                </li>
+              </a>
+
+              <a href="#obtencao">
+                <li class="itemSumario">
+                  <h4>Obtenção do contexto das falas</h4>
+                </li>
+              </a>
+
+              <a href="#tecnologias">
+                <li class="itemSumario">
+                  <h4>Tecnologias</h4>
+                </li>
+              </a>
+
+              <a href="#materiaisApoio">
+                <li class="itemSumario">
+                  <h4>Materiais de apoio</h4>
+                </li>
+              </a>
+
+              <a href="#tarefas">
+                <li class="itemSumario">
+                  <h4>Tarefas, atividades e avaliações</h4>
+                </li>
+              </a>
+            </ul>
+          </a>
+
+          <a href="#recursos">
+            <li class="itemSumario">
+              <h3>6. Recurso Úteis</h3>
+            </li>
+
+          </a>
+
+          <a href="#consideracoes">
+            <li class="itemSumario">
+              <h3>7. Considerações finais</h3>
+            </li>
+          </a>
+
+          <a href="#referencias">
+            <li>
+              <h3 class="itemSumario">8. Referências Bibliográficas
+            </li>
+            </h3>
+          </a>
+
+        </ol>
+      </div>
+    </div>
+  </aside>
+
+</body>
+
+</html>
